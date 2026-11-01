@@ -5187,17 +5187,13 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
   display: block;
 }
 
-/* Ambient Vignette Gradient: Leaves collectibles on left crisp while making HTML text on right razor-sharp */
+/* Ambient Vignette Gradient: Center darkened for text readability, edges lighter to show collectibles */
 .heroAmbientOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to left,
-    rgba(14, 9, 6, 0.9) 0%,
-    rgba(14, 9, 6, 0.72) 42%,
-    rgba(14, 9, 6, 0.28) 72%,
-    rgba(14, 9, 6, 0.05) 100%
-  );
+  background:
+    radial-gradient(ellipse 70% 100% at 50% 55%, rgba(14, 9, 6, 0.78) 0%, rgba(14, 9, 6, 0.55) 35%, rgba(14, 9, 6, 0.18) 70%, rgba(14, 9, 6, 0.05) 100%),
+    linear-gradient(to bottom, rgba(14, 9, 6, 0.3) 0%, rgba(14, 9, 6, 0.1) 30%, rgba(14, 9, 6, 0.5) 100%);
   pointer-events: none;
 }
 
@@ -5209,7 +5205,7 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
   margin: 0 auto;
   padding: calc(72px + 36px) clamp(20px, 4.5vw, 64px) clamp(36px, 4vw, 56px);
   display: flex;
-  justify-content: flex-end; /* In RTL, aligns to the right side of the screen */
+  justify-content: center; /* Center text over dark area of hero image */
   align-items: center;
 }
 
@@ -5218,8 +5214,8 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: right;
+  align-items: center;
+  text-align: center;
 }
 
 .heroEyebrow {
@@ -5269,7 +5265,7 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
   gap: 12px;
   width: 100%;
   max-width: 320px;
-  margin: 18px 0;
+  margin: 18px auto;
 }
 
 .flourishLine {
