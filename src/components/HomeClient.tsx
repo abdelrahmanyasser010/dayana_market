@@ -250,62 +250,7 @@ export function HomeClient({ products }: { products: Product[] }) {
         </div>
       </section>
 
-      {/* 5. SECTION: Discovery Quad Cards (Images 1 & 3 Fusion) */}
-      <section className="antiqueDiscoverySection" aria-label="Explore Archives and Heritage">
-        <div className="discoveryCardsGridUnified">
-          {/* Card 1: موسوعة الأنتيكات */}
-          <Link
-            href="/encyclopedia"
-            className="discoveryCardExactLink"
-            title={isAr ? "تصفح موسوعة الأنتيكات" : "Antique Encyclopedia"}
-          >
-            <img
-              src="/media/extracted/encyclopedia_globe.webp"
-              alt="موسوعة الأنتيكات - معلومات غنية عن المقتنيات والحضارات والعصور"
-              loading="lazy"
-            />
-          </Link>
 
-          {/* Card 2: حكايات القطع */}
-          <Link
-            href="/timeline"
-            className="discoveryCardExactLink"
-            title={isAr ? "اقرأ حكايات القطع" : "Stories Behind"}
-          >
-            <img
-              src="/media/extracted/stories_vintage_photos.webp"
-              alt="حكايات القطع - قصص ملهمة من عالم الأنتيكات"
-              loading="lazy"
-            />
-          </Link>
-
-          {/* Card 3: من ذاكرة مصر (Image 3 Feature) */}
-          <Link
-            href="/heritage"
-            className="discoveryCardExactLink"
-            title={isAr ? "اكتشف معروضات من ذاكرة مصر" : "Egyptian Heritage"}
-          >
-            <img
-              src="/media/extracted/cairo_tram_heritage.webp"
-              alt="من ذاكرة مصر - حكايات من ماضي بلدنا العريق"
-              loading="lazy"
-            />
-          </Link>
-
-          {/* Card 4: لماذا تختارنا؟ (Image 1 Feature) */}
-          <Link
-            href="/#about"
-            className="discoveryCardExactLink"
-            title={isAr ? "لماذا تختار ديانا أنتيك؟" : "Why Choose Us"}
-          >
-            <img
-              src="/media/extracted/why_choose_us_armillary.webp"
-              alt="لماذا تختارنا - فحص دقيق لكل قطعة ومعلومات موثوقة"
-              loading="lazy"
-            />
-          </Link>
-        </div>
-      </section>
 
       {/* 6. SECTION: Trust Bar (Image 3 & 1 Fusion) */}
       <section className="antiqueTrustBar" aria-label="Customer Trust Commitments">
