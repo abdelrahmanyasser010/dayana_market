@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import {
+  Globe,
   Heart,
   Menu,
   Search,
@@ -12,7 +13,10 @@ import {
   Home,
   BookOpen,
   Landmark,
-  Sparkles
+  Sparkles,
+  History,
+  Moon,
+  Sun
 } from "lucide-react";
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { Logo } from "./Logo";
@@ -26,9 +30,10 @@ export function Header() {
   const [searchQuery, setSearchQuery] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const { cartCount, wishlist, language, t } = useStore();
+  const { cartCount, wishlist, language, toggleLanguage, theme, toggleTheme, t } = useStore();
   const isAr = language === "ar";
   const prevCount = useRef(cartCount);
+  const isHome = pathname === "/";
 
   // Handle header appearance on scroll
   useEffect(() => {
@@ -57,7 +62,6 @@ export function Header() {
     router.push(`/shop?q=${encodeURIComponent(searchQuery.trim())}`);
   }
 
-  // Exactly matching the 4 navigation links from the reference design
   const navLinks = [
     {
       label: isAr ? "الرئيسية" : "Home",
@@ -66,9 +70,9 @@ export function Header() {
       exact: true
     },
     {
-      label: isAr ? "موسوعة الأنتيكات" : "Encyclopedia",
-      href: "/encyclopedia",
-      icon: BookOpen
+      label: isAr ? "متجر المقتنيات" : "Collectibles",
+      href: "/shop",
+      icon: Sparkles
     },
     {
       label: isAr ? "من ذاكرة مصر" : "Egypt Heritage",
@@ -76,9 +80,14 @@ export function Header() {
       icon: Landmark
     },
     {
-      label: isAr ? "تصفح القطع" : "Browse Relics",
-      href: "/shop",
-      icon: Sparkles
+      label: isAr ? "موسوعة الأنتيكات" : "Encyclopedia",
+      href: "/encyclopedia",
+      icon: BookOpen
+    },
+    {
+      label: isAr ? "قصة ديانا أنتيك" : "Our Story",
+      href: "/about",
+      icon: History
     }
   ];
 
@@ -86,7 +95,7 @@ export function Header() {
     <>
       <header
         className={`siteHeader antiqueSiteHeader ${
-          isScrolled ? "headerScrolledSolid" : "headerTransparentHero"
+          isHome && !isScrolled ? "headerTransparentHero" : "headerScrolledSolid"
         }`}
       >
         <div className="headerInner antiqueHeaderInner">
@@ -99,12 +108,12 @@ export function Header() {
             <Menu size={22} />
           </button>
 
-          {/* Right: Diana Antique Logo tab with downward curve drop */}
+          {/* Diana Antique Brand Logo Plaque on Far Right (RTL) */}
           <div className="headerLogoWrap">
-            <Logo compact={false} />
+            <Logo compact={false} showTagline={true} />
           </div>
 
-          {/* Center: Desktop Navigation exactly matching design mockup */}
+          {/* Desktop Navigation in Center */}
           <nav className="desktopNav antiqueNav" aria-label="Primary navigation">
             {navLinks.map(({ label, href, icon: Icon, exact }) => {
               const isActive = exact ? pathname === href : pathname.startsWith(href);
@@ -121,61 +130,98 @@ export function Header() {
             })}
           </nav>
 
-          {/* Left Controls: Capsule Search, Cart with badge, Wishlist, User Account */}
-          <div className="headerLeftGroup">
-            {/* Direct Capsule Search Bar */}
-            <form onSubmit={handleSearch} className="headerSearchBar" role="search">
-              <input
-                type="text"
-                placeholder={isAr ? "...ابحث عن قطعة أو قصة" : "Search collectibles..."}
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                aria-label="Search"
-              />
-              <button type="submit" className="searchSubmitBtn" aria-label="Submit Search">
-                <Search size={14} />
-              </button>
-            </form>
+          {/* Direct Embedded Search Bar */}
+          <form onSubmit={handleSearch} className="headerSearchBar" role="search">
+            <input
+              type="text"
+              placeholder={isAr ? "ابحث عن قطعة أو قصة..." : "Search collectibles..."}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              aria-label="Search"
+            />
+            <button type="submit" className="searchSubmitBtn" aria-label="Submit Search">
+              <Search size={14} />
+            </button>
+          </form>
 
-            <div className="headerIconsRow">
-              {/* Shopping Bag / Cart with Badge (Count: 2 as in mockup or real cart count) */}
-              <Link
-                className={`iconButton antiqueIconBtn cartIconBtn ${
-                  cartBounced ? "bagBounce" : ""
-                }`}
-                href="/cart"
-                aria-label={t("navBag")}
-                title={t("navBag")}
-              >
-                <ShoppingBag size={19} />
-                <span className="badge antiqueBadge cartBadge">
-                  {cartCount > 0 ? cartCount : 2}
-                </span>
-              </Link>
+          {/* Header Actions on Left in RTL: All in one single flex line */}
+          <div className="headerActions antiqueActions">
+            {/* Theme Switcher: Dark Museum vs Light Parchment */}
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="themeSwitchBtn"
+              title={
+                theme === "dark"
+                  ? isAr
+                    ? "التحويل للوضع الورقي الكلاسيكي"
+                    : "Switch to Light Parchment"
+                  : isAr
+                  ? "التحويل للوضع الأثري الفخم"
+                  : "Switch to Dark Museum"
+              }
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? (
+                <Sun size={15} className="themeIconGold" />
+              ) : (
+                <Moon size={15} className="themeIconGold" />
+              )}
+              <span className="themeText mobileHide">
+                {theme === "dark" ? (isAr ? "نهاري" : "Light") : isAr ? "ليلي" : "Dark"}
+              </span>
+            </button>
 
-              {/* Wishlist Heart */}
-              <Link
-                className="iconButton antiqueIconBtn"
-                href="/wishlist"
-                aria-label={t("navWishlist")}
-                title={t("navWishlist")}
-              >
-                <Heart size={19} />
-                {wishlist.length > 0 && (
-                  <span className="badge antiqueBadge">{wishlist.length}</span>
-                )}
-              </Link>
+            {/* Language Switcher */}
+            <button
+              type="button"
+              onClick={toggleLanguage}
+              className="langSwitchBtn"
+              title="Switch language / تغيير اللغة"
+              aria-label="Toggle language"
+            >
+              <Globe size={14} />
+              <span>{language === "ar" ? "EN" : "عربي"}</span>
+            </button>
 
-              {/* User Account (Clean icon only) */}
-              <Link
-                href="/account/orders"
-                className="iconButton antiqueIconBtn"
-                title={isAr ? "حسابي والطلبات" : "My Account"}
-                aria-label="Account"
-              >
-                <User size={19} />
-              </Link>
-            </div>
+            {/* Shopping Bag / Cart */}
+            <Link
+              className={`iconButton antiqueIconBtn cartIconBtn ${
+                cartBounced ? "bagBounce" : ""
+              }`}
+              href="/cart"
+              aria-label={t("navBag")}
+              title={t("navBag")}
+            >
+              <ShoppingBag size={18} />
+              <span className="badge antiqueBadge cartBadge">
+                {cartCount > 0 ? cartCount : 1}
+              </span>
+            </Link>
+
+            {/* Wishlist */}
+            <Link
+              className="iconButton antiqueIconBtn"
+              href="/wishlist"
+              aria-label={t("navWishlist")}
+              title={t("navWishlist")}
+            >
+              <Heart size={18} />
+              {wishlist.length > 0 && (
+                <span className="badge antiqueBadge">{wishlist.length}</span>
+              )}
+            </Link>
+
+            {/* Account / Orders */}
+            <Link
+              href="/account/orders"
+              className="headerAccountLink"
+              title={isAr ? "حسابي والطلبات" : "My Account"}
+              aria-label="Account"
+            >
+              <User size={18} />
+              <span className="accountText mobileHide">{isAr ? "حسابي" : "Account"}</span>
+            </Link>
           </div>
         </div>
       </header>
@@ -183,14 +229,47 @@ export function Header() {
       {/* Mobile Drawer Menu */}
       <div className={`mobileMenu antiqueMobileMenu ${open ? "isOpen" : ""}`} aria-hidden={!open}>
         <div className="mobileMenuTop">
-          <Logo compact />
-          <button
-            className="iconButton"
-            onClick={() => setOpen(false)}
-            aria-label="Close menu"
-          >
-            <X />
-          </button>
+          <Logo compact showTagline={false} />
+          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="langSwitchBtn"
+              style={{
+                padding: "6px 10px",
+                border: "1px solid var(--line)",
+                borderRadius: "999px"
+              }}
+              title="Toggle Theme"
+            >
+              {theme === "dark" ? (
+                <Sun size={15} className="themeIconGold" />
+              ) : (
+                <Moon size={15} className="themeIconGold" />
+              )}
+              <span>{theme === "dark" ? (isAr ? "نهاري" : "Light") : isAr ? "ليلي" : "Dark"}</span>
+            </button>
+            <button
+              type="button"
+              onClick={toggleLanguage}
+              className="langSwitchBtn"
+              style={{
+                padding: "6px 10px",
+                border: "1px solid var(--line)",
+                borderRadius: "999px"
+              }}
+            >
+              <Globe size={15} />
+              <span>{language === "ar" ? "EN" : "عربي"}</span>
+            </button>
+            <button
+              className="iconButton"
+              onClick={() => setOpen(false)}
+              aria-label="Close menu"
+            >
+              <X />
+            </button>
+          </div>
         </div>
 
         {/* Mobile Search inside drawer */}
@@ -203,7 +282,7 @@ export function Header() {
         >
           <input
             type="text"
-            placeholder={isAr ? "...ابحث عن قطعة أو قصة" : "Search collectibles..."}
+            placeholder={isAr ? "ابحث عن قطعة أو قصة..." : "Search collectibles or stories..."}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
@@ -231,13 +310,13 @@ export function Header() {
             </Link>
           ))}
           <Link href="/wishlist" onClick={() => setOpen(false)}>
-            <span className="mobileNavIndex">05</span>
+            <span className="mobileNavIndex">06</span>
             <span className="mobileNavLabel">{t("navWishlist")}</span>
           </Link>
           <Link href="/account/orders" onClick={() => setOpen(false)}>
-            <span className="mobileNavIndex">06</span>
+            <span className="mobileNavIndex">07</span>
             <span className="mobileNavLabel">
-              {isAr ? "حسابي والطلبات" : "Orders & Account"}
+              {isAr ? "متابعة الطلبات وحسابي" : "Orders & Account"}
             </span>
           </Link>
         </div>

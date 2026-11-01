@@ -4854,18 +4854,26 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
   top: 0 !important;
   left: 0 !important;
   right: 0 !important;
-  height: 58px !important;
+  height: 72px !important;
   z-index: 100 !important;
-  overflow: visible !important;
-  background: rgba(20, 14, 9, 0.75) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border-bottom: 1px solid rgba(212, 163, 75, 0.3) !important;
-  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+  transition: background 0.35s ease, backdrop-filter 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease !important;
 }
 
+/* Floating Transparent Header over Hero Banner */
+.antiqueSiteHeader.headerTransparentHero {
+  background: linear-gradient(180deg, rgba(14, 9, 6, 0.85) 0%, rgba(14, 9, 6, 0.45) 55%, transparent 100%) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  border-bottom: 1px solid rgba(223, 190, 118, 0.14) !important;
+  box-shadow: none !important;
+}
+
+/* Solid Frosted Glass Header when scrolled or on internal pages */
 .antiqueSiteHeader.headerScrolledSolid {
   background: rgba(18, 12, 8, 0.96) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-bottom: 1px solid rgba(223, 190, 118, 0.28) !important;
   box-shadow: 0 6px 24px rgba(12, 7, 4, 0.5) !important;
 }
 
@@ -4874,48 +4882,40 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
   align-items: center !important;
   justify-content: space-between !important;
   flex-wrap: nowrap !important;
-  gap: 16px !important;
+  gap: 14px !important;
   height: 100% !important;
   max-width: 1540px !important;
   margin: 0 auto !important;
   padding: 0 clamp(14px, 2.5vw, 32px) !important;
-  overflow: visible !important;
 }
 
 .headerLogoWrap {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-shrink: 0;
-  overflow: visible;
-  z-index: 30;
 }
 
-/* The Logo Tab that takes a curve and dips down on the right side */
-.headerLogoTab {
-  position: relative;
+/* Elegant Semi-Transparent Logo Plaque exactly matching mockup */
+.dianaLogoPlaque {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: rgba(22, 14, 9, 0.82);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(212, 163, 75, 0.45);
-  border-left: 1px solid rgba(212, 163, 75, 0.45);
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 10px;
-  padding: 6px 16px 10px 16px;
-  margin-top: -2px;
-  margin-bottom: -28px;
+  background: rgba(28, 18, 12, 0.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 163, 75, 0.42);
+  border-radius: 14px;
+  padding: 6px 14px;
   text-decoration: none;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.42), inset 0 1px 0 rgba(255, 235, 176, 0.15);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 235, 176, 0.15);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   flex-shrink: 0;
 }
 
-.headerLogoTab:hover {
-  background: rgba(36, 22, 14, 0.94);
+.dianaLogoPlaque:hover {
+  background: rgba(38, 24, 16, 0.9);
   border-color: rgba(223, 190, 118, 0.75);
-  box-shadow: 0 10px 28px rgba(212, 163, 75, 0.25), inset 0 1px 0 rgba(255, 235, 176, 0.25);
+  box-shadow: 0 6px 24px rgba(212, 163, 75, 0.28), inset 0 1px 0 rgba(255, 235, 176, 0.25);
   transform: translateY(-1px);
 }
 
@@ -4929,18 +4929,24 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
 .dianaBrandText {
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  gap: 1px;
   text-align: right;
+}
+
+.dianaBrandNamesRow {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
 }
 
 .dianaArabicName {
   font-family: var(--font-antique-heading), 'Amiri', 'Traditional Arabic', serif;
-  font-size: 21px;
-  font-weight: 800;
+  font-size: 19px;
+  font-weight: 700;
   color: #dfbe76;
   line-height: 1.15;
   letter-spacing: 0.3px;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .dianaEnglishName {
@@ -4958,13 +4964,12 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
   font-weight: 500;
   opacity: 0.95;
   white-space: nowrap;
-  line-height: 1.2;
 }
 
 .antiqueNav {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex-shrink: 1;
 }
 
@@ -4975,7 +4980,7 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
   font-size: 13.5px;
   color: #e5dfd3;
   font-weight: 500;
-  padding: 6px 12px;
+  padding: 6px 10px;
   border-radius: 999px;
   transition: all 0.2s ease;
   white-space: nowrap;
@@ -4992,20 +4997,13 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
   background: rgba(223, 190, 118, 0.14);
 }
 
-/* Active Nav Link Capsule Pill Matching Mockup */
+/* Active Nav Link Capsule Pill Matching Reference Mockup */
 .navItemLink.navItemActivePill {
-  background: rgba(65, 40, 22, 0.88) !important;
+  background: rgba(65, 40, 22, 0.85) !important;
   border: 1px solid rgba(223, 190, 118, 0.45) !important;
   color: #ffebb0 !important;
   padding: 6px 14px !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.32) !important;
-}
-
-.headerLeftGroup {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
 }
 
 .headerSearchBar {
@@ -5017,7 +5015,7 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(223, 190, 118, 0.35);
   border-radius: 999px;
-  padding: 5px 14px;
+  padding: 6px 14px;
   width: clamp(140px, 14vw, 220px);
   transition: all 0.25s ease;
 }
@@ -5036,7 +5034,6 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
   font-size: 12.5px;
   color: #fff;
   width: 100%;
-  direction: rtl;
 }
 
 .headerSearchBar input::placeholder {
@@ -5053,10 +5050,59 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
   padding: 0;
 }
 
-.headerIconsRow {
-  display: flex;
+.antiqueActions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Theme Switcher Button */
+.themeSwitchBtn {
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
+  padding: 5px 10px;
+  background: rgba(223, 190, 118, 0.12);
+  border: 1px solid rgba(223, 190, 118, 0.35);
+  border-radius: 999px;
+  color: var(--antique-gold);
+  font-size: 11.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.themeSwitchBtn:hover {
+  background: rgba(223, 190, 118, 0.22);
+  border-color: var(--antique-gold);
+  transform: translateY(-1px);
+}
+
+.themeIconGold {
+  color: var(--antique-gold);
+}
+
+.themeText {
+  color: #f7ebd3;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.headerAccountLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #e5dfd3;
+  font-size: 13px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.headerAccountLink:hover {
+  color: #ffebb0;
 }
 
 .antiqueIconBtn {
@@ -5069,7 +5115,6 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
   justify-content: center !important;
   border-radius: 8px !important;
   transition: all 0.2s ease !important;
-  text-decoration: none !important;
 }
 
 .antiqueIconBtn:hover {
@@ -5100,46 +5145,305 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
   color: #fff !important;
 }
 
-/* 2. Hero Section - The Exact Master Diana Antique Banner from the Design Mockup */
-.antiqueHeroMasterSection {
+/* 2. Hero Section - PURE SEPARATION OF CLEAN IMAGE AND HTML CONTENT */
+.antiqueHeroInteractive {
   position: relative;
   width: 100%;
+  min-height: clamp(540px, 68vh, 720px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
   background: #140d08;
-  overflow: hidden;
-  line-height: 0;
 }
 
-.heroBannerContainer {
-  position: relative;
-  width: 100%;
-  max-width: 1540px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.heroMasterCoverImg {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* Transparent Clickable Overlay exactly on the CTA button in the image */
-.heroDirectCtaOverlay {
+.heroBackdropLayer {
   position: absolute;
-  left: 52.8%;
-  top: 86.5%;
-  width: 125px;
-  height: 34px;
-  transform: translate(-50%, -50%);
-  border-radius: 999px;
-  cursor: pointer;
-  z-index: 10;
-  transition: all 0.2s ease;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-.heroDirectCtaOverlay:hover {
-  box-shadow: 0 0 16px rgba(223, 190, 118, 0.5);
+.heroSlideBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.heroSlideBg.heroSlideActive {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.heroCoverImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center left;
+  display: block;
+}
+
+/* Ambient Vignette Gradient: Leaves collectibles on left crisp while making HTML text on right razor-sharp */
+.heroAmbientOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to left,
+    rgba(14, 9, 6, 0.9) 0%,
+    rgba(14, 9, 6, 0.72) 42%,
+    rgba(14, 9, 6, 0.28) 72%,
+    rgba(14, 9, 6, 0.05) 100%
+  );
+  pointer-events: none;
+}
+
+.heroContentContainer {
+  position: relative;
+  z-index: 10;
+  max-width: 1540px;
+  width: 100%;
+  margin: 0 auto;
+  padding: calc(72px + 36px) clamp(20px, 4.5vw, 64px) clamp(36px, 4vw, 56px);
+  display: flex;
+  justify-content: flex-end; /* In RTL, aligns to the right side of the screen */
+  align-items: center;
+}
+
+.heroTextCard {
+  max-width: 580px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: right;
+}
+
+.heroEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(223, 190, 118, 0.14);
+  border: 1px solid rgba(223, 190, 118, 0.38);
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #dfbe76;
+  margin-bottom: 16px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.heroGoldSparkle {
+  color: #dfbe76;
+}
+
+.heroMainTitle {
+  font-family: var(--font-antique-heading), 'Amiri', 'Traditional Arabic', serif;
+  font-size: clamp(34px, 4.4vw, 56px);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.18;
+  margin: 0;
+  text-shadow: 0 3px 20px rgba(0, 0, 0, 0.85);
+  letter-spacing: -0.3px;
+}
+
+.heroSubTitle {
+  font-family: var(--font-antique-heading), 'Amiri', 'Traditional Arabic', serif;
+  font-size: clamp(22px, 2.6vw, 34px);
+  font-weight: 700;
+  color: #dfbe76;
+  line-height: 1.25;
+  margin: 8px 0 0;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8);
+}
+
+.heroFlourishDivider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+  margin: 18px 0;
+}
+
+.flourishLine {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to left, rgba(223, 190, 118, 0.6), transparent);
+}
+
+.flourishLine:last-child {
+  background: linear-gradient(to right, rgba(223, 190, 118, 0.6), transparent);
+}
+
+.flourishDiamond {
+  color: #dfbe76;
+  font-size: 14px;
+  text-shadow: 0 0 10px rgba(223, 190, 118, 0.6);
+}
+
+.heroDescription {
+  font-size: clamp(15px, 1.3vw, 18px);
+  line-height: 1.7;
+  color: #e5dfd3;
+  margin: 0 0 24px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+.heroActionsGroup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.heroPrimaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #dfbe76 0%, #c59844 50%, #9a6d20 100%);
+  color: #120e0a;
+  font-weight: 700;
+  font-size: 15.5px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(197, 152, 68, 0.35);
+  transition: all 0.25s ease;
+}
+
+.heroPrimaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(197, 152, 68, 0.5);
+  background: linear-gradient(135deg, #ffebb0 0%, #dfbe76 50%, #b3802b 100%);
+}
+
+.heroSecondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(28, 18, 12, 0.75);
+  border: 1px solid rgba(223, 190, 118, 0.45);
+  color: #ffebb0;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 11px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+
+.heroSecondaryBtn:hover {
+  background: rgba(45, 28, 18, 0.9);
+  border-color: #dfbe76;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.heroTrustBadgesRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.trustPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(240, 230, 214, 0.9);
+  background: rgba(20, 13, 8, 0.65);
+  border: 1px solid rgba(223, 190, 118, 0.24);
+  border-radius: 999px;
+  padding: 5px 12px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.trustIcon {
+  color: #dfbe76;
+}
+
+/* Carousel Arrow Navigation Controls */
+.heroCarouselControls {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 15;
+}
+
+.carouselNavBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(20, 13, 8, 0.72);
+  border: 1px solid rgba(223, 190, 118, 0.38);
+  color: #ffebb0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.carouselPrevBtn {
+  right: 24px; /* in RTL, right is start */
+}
+
+.carouselNextBtn {
+  left: 24px; /* in RTL, left is end */
+}
+
+.carouselNavBtn:hover {
+  background: rgba(40, 25, 15, 0.95);
+  border-color: #dfbe76;
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 4px 16px rgba(223, 190, 118, 0.35);
+}
+
+.carouselDotsWrap {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: auto;
+}
+
+.carouselDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(223, 190, 118, 0.3);
+  border: 1px solid rgba(223, 190, 118, 0.5);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 0;
+}
+
+.carouselDot.activeDot {
+  width: 28px;
+  border-radius: 999px;
+  background: #dfbe76;
+  box-shadow: 0 0 10px rgba(223, 190, 118, 0.6);
 }
 
 @media (max-width: 1024px) {
@@ -5151,10 +5455,13 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
     padding: 5px 8px;
   }
   .dianaArabicName {
-    font-size: 18px;
+    font-size: 17px;
   }
   .dianaEnglishName {
-    font-size: 10.5px;
+    font-size: 11px;
+  }
+  .heroContentContainer {
+    padding-top: calc(72px + 20px);
   }
 }
 
@@ -5165,12 +5472,46 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
   .headerSearchBar {
     display: none !important;
   }
+  .antiqueHeroInteractive {
+    min-height: 540px;
+    align-items: flex-end;
+  }
+  .heroCoverImg {
+    object-position: 25% center;
+  }
+  .heroAmbientOverlay {
+    background: linear-gradient(
+      to top,
+      rgba(14, 9, 6, 0.96) 0%,
+      rgba(14, 9, 6, 0.82) 60%,
+      rgba(14, 9, 6, 0.25) 100%
+    );
+  }
+  .heroContentContainer {
+    justify-content: center;
+    padding: 84px 16px 40px;
+  }
+  .heroTextCard {
+    align-items: center;
+    text-align: center;
+  }
+  .heroFlourishDivider {
+    margin: 14px auto;
+  }
+  .heroActionsGroup {
+    justify-content: center;
+  }
+  .heroTrustBadgesRow {
+    justify-content: center;
+  }
+  .carouselNavBtn {
+    display: none;
+  }
   .dianaTagline {
     display: none;
   }
-  .headerLogoTab {
-    padding: 4px 10px 8px 10px;
-    margin-bottom: -16px;
+  .dianaLogoPlaque {
+    padding: 4px 10px;
     gap: 8px;
   }
 }
