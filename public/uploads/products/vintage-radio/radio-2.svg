@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#24211d"/>
+      <stop offset="60%" stop-color="#141311"/>
+      <stop offset="100%" stop-color="#0a0908"/>
+    </radialGradient>
+    <radialGradient id="magicEye" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#55ff99"/>
+      <stop offset="60%" stop-color="#22aa55"/>
+      <stop offset="100%" stop-color="#053315"/>
+    </radialGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <!-- Macro view of Green "Magic Eye" Tuning Vacuum Tube and Station Frequencies -->
+  <g transform="translate(400, 480)">
+    <circle cx="0" cy="0" r="230" fill="#15120e" stroke="#663c1b" stroke-width="8"/>
+    <!-- Glowing Green Magic Eye Indicator (EM84 / EM80 tube) -->
+    <circle cx="0" cy="-60" r="85" fill="url(#magicEye)" stroke="#88ffaa" stroke-width="4"/>
+    <path d="M 0 -60 L -35 -130 L 35 -130 Z" fill="#000" opacity="0.6"/>
+    <!-- Station Callout in Vintage Arabic Typography -->
+    <text x="0" y="70" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="#dfbe76" text-anchor="middle">هنا القاهرة</text>
+    <text x="0" y="105" font-family="serif" font-size="18" fill="#e8dfce" text-anchor="middle">الإذاعة اللاسلكية للحكومة المصرية</text>
+    <text x="0" y="135" font-family="sans-serif" font-size="12" fill="#888" letter-spacing="3" text-anchor="middle">صوت العرب • أم كلثوم</text>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#24211d"/>
+      <stop offset="60%" stop-color="#141311"/>
+      <stop offset="100%" stop-color="#0a0908"/>
+    </radialGradient>
+    <radialGradient id="brass" cx="45%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#fff8d8"/>
+      <stop offset="35%" stop-color="#e2bf6e"/>
+      <stop offset="75%" stop-color="#8f722a"/>
+      <stop offset="100%" stop-color="#554112"/>
+    </radialGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <!-- Macro view of 360-degree Compass Rose & Jeweled Pivot -->
+  <g transform="translate(400, 480)">
+    <circle cx="0" cy="0" r="240" fill="#f4ede0" stroke="url(#brass)" stroke-width="12"/>
+    <circle cx="0" cy="0" r="215" fill="none" stroke="#222" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="180" fill="none" stroke="#555" stroke-width="1" stroke-dasharray="4 2"/>
+    
+    <!-- Fine Degree Markings Ring -->
+    <g font-family="sans-serif" font-size="11" font-weight="bold" fill="#333" text-anchor="middle">
+      <text x="0" y="-195">0° / 360°</text>
+      <text x="140" y="-140">45°</text>
+      <text x="195" y="4">90°</text>
+      <text x="140" y="145">135°</text>
+      <text x="0" y="200">180°</text>
+      <text x="-140" y="145">225°</text>
+      <text x="-195" y="4">270°</text>
+      <text x="-140" y="-140">315°</text>
+    </g>
+
+    <!-- Center Fleur-de-lis Crest -->
+    <path d="M 0 -150 C -25 -90 -25 -40 0 0 C 25 -40 25 -90 0 -150 Z" fill="#aa8833" stroke="#222" stroke-width="2"/>
+    <circle cx="0" cy="0" r="22" fill="url(#brass)" stroke="#442a0a" stroke-width="3"/>
+    <circle cx="0" cy="0" r="8" fill="#b01b2a"/>
+  </g>
+</svg>

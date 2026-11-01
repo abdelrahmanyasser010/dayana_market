@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#241f1a"/>
+      <stop offset="60%" stop-color="#14110e"/>
+      <stop offset="100%" stop-color="#0a0806"/>
+    </radialGradient>
+    <radialGradient id="macroBrass" cx="45%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#fff4d0"/>
+      <stop offset="40%" stop-color="#d9b66a"/>
+      <stop offset="85%" stop-color="#806223"/>
+      <stop offset="100%" stop-color="#4a3711"/>
+    </radialGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <!-- Macro view of hand chisel marks & maker's hallmark stamp -->
+  <g transform="translate(400, 480)">
+    <circle cx="0" cy="0" r="240" fill="url(#macroBrass)" stroke="#3a2b0c" stroke-width="8"/>
+    <!-- Intricate interlocking arabesque lines -->
+    <g stroke="#3a280b" stroke-width="3" fill="none">
+      <circle cx="0" cy="0" r="160"/>
+      <circle cx="0" cy="0" r="90"/>
+      <path d="M -160 0 C -80 -80 80 -80 160 0 C 80 80 -80 80 -160 0"/>
+      <path d="M 0 -160 C -80 -80 -80 80 0 160 C 80 80 80 -80 0 -160"/>
+    </g>
+    <!-- Egyptian Official Silver/Brass Assay Hallmark Stamp -->
+    <rect x="-45" y="-30" width="90" height="60" rx="4" fill="#302209" stroke="#fff4d0" stroke-width="1.5"/>
+    <text x="0" y="-8" font-family="serif" font-size="12" fill="#fff4d0" font-weight="bold" text-anchor="middle">مصر</text>
+    <text x="0" y="12" font-family="serif" font-size="10" fill="#dfbe76" text-anchor="middle">القاهرة ١٩٣٢</text>
+  </g>
+</svg>

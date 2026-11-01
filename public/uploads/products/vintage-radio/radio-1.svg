@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#2a2723"/>
+      <stop offset="60%" stop-color="#181614"/>
+      <stop offset="100%" stop-color="#0a0908"/>
+    </radialGradient>
+    <linearGradient id="radioWood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#693b1e"/>
+      <stop offset="30%" stop-color="#502c16"/>
+      <stop offset="70%" stop-color="#3d2110"/>
+      <stop offset="100%" stop-color="#241309"/>
+    </linearGradient>
+    <linearGradient id="amberGlass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#20150a"/>
+      <stop offset="25%" stop-color="#6e4815"/>
+      <stop offset="50%" stop-color="#d4942c"/>
+      <stop offset="75%" stop-color="#6e4815"/>
+      <stop offset="100%" stop-color="#20150a"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="25" stdDeviation="30" flood-color="#000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <ellipse cx="400" cy="740" rx="270" ry="40" fill="#000" opacity="0.6"/>
+
+  <g filter="url(#shadow)" transform="translate(400, 480)">
+    <!-- Radio Rounded Mid-Century Wood Cabinet -->
+    <rect x="-240" y="-180" width="480" height="340" rx="35" fill="url(#radioWood)" stroke="#804a25" stroke-width="3"/>
+    <!-- Outer Inlay Gold Stripe -->
+    <rect x="-230" y="-170" width="460" height="320" rx="30" fill="none" stroke="#dfbe76" stroke-width="1.5" opacity="0.8"/>
+
+    <!-- Upper Speaker Grille Fabric (vintage gold mesh) -->
+    <rect x="-210" y="-150" width="420" height="150" rx="15" fill="#352815" stroke="#251a08" stroke-width="2"/>
+    <!-- Fabric grid pattern -->
+    <g stroke="#dfbe76" stroke-width="0.8" opacity="0.25">
+      <line x1="-210" y1="-120" x2="210" y2="-120"/>
+      <line x1="-210" y1="-90" x2="210" y2="-90"/>
+      <line x1="-210" y1="-60" x2="210" y2="-60"/>
+      <line x1="-210" y1="-30" x2="210" y2="-30"/>
+    </g>
+    <!-- Brand Crest on Grille (Philips / Telefunken star) -->
+    <circle cx="0" cy="-75" r="22" fill="#dfbe76" stroke="#50350d" stroke-width="2"/>
+    <text x="0" y="-70" font-family="serif" font-size="12" font-weight="bold" fill="#221100" text-anchor="middle">★</text>
+
+    <!-- Lower Glowing Tuning Glass Dial Window -->
+    <rect x="-210" y="20" width="420" height="110" rx="10" fill="#0d0905" stroke="#dfbe76" stroke-width="2"/>
+    <!-- Backlit Glass Frequency Scale -->
+    <rect x="-200" y="30" width="400" height="90" rx="6" fill="url(#amberGlass)" opacity="0.85"/>
+
+    <!-- Station Names Printed on Dial Glass (Egyptian & World) -->
+    <g font-family="sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">
+      <text x="-140" y="55">القاهرة (MW)</text>
+      <text x="-50" y="55">صوت العرب</text>
+      <text x="50" y="55">لندن BBC</text>
+      <text x="140" y="55">باريس RTF</text>
+
+      <text x="-140" y="90" fill="#dfbe76">550 kHz</text>
+      <text x="-50" y="90" fill="#dfbe76">800 kHz</text>
+      <text x="50" y="90" fill="#dfbe76">1200 kHz</text>
+      <text x="140" y="90" fill="#dfbe76">1600 kHz</text>
+    </g>
+
+    <!-- Red Tuning Needle Line -->
+    <line x1="-50" y1="28" x2="-50" y2="122" stroke="#ff3333" stroke-width="2.5"/>
+
+    <!-- Big Cream Bakelite / Brass Control Knobs Below -->
+    <circle cx="-130" cy="180" r="25" fill="#e8dfce" stroke="#8c7042" stroke-width="3"/>
+    <circle cx="-130" cy="180" r="12" fill="#dfbe76"/>
+    <text x="-130" y="215" font-family="sans-serif" font-size="9" fill="#c7c3bb" text-anchor="middle">الصوت / POWER</text>
+
+    <!-- Center Pushbuttons for Bands (MW, SW, LW, PU) -->
+    <g transform="translate(-50, 168)">
+      <rect x="0" y="0" width="22" height="24" rx="3" fill="#e8dfce" stroke="#555"/>
+      <rect x="26" y="0" width="22" height="24" rx="3" fill="#dfbe76" stroke="#555"/>
+      <rect x="52" y="0" width="22" height="24" rx="3" fill="#e8dfce" stroke="#555"/>
+      <rect x="78" y="0" width="22" height="24" rx="3" fill="#e8dfce" stroke="#555"/>
+    </g>
+
+    <circle cx="130" cy="180" r="25" fill="#e8dfce" stroke="#8c7042" stroke-width="3"/>
+    <circle cx="130" cy="180" r="12" fill="#dfbe76"/>
+    <text x="130" y="215" font-family="sans-serif" font-size="9" fill="#c7c3bb" text-anchor="middle">الموجات / TUNING</text>
+  </g>
+
+  <!-- Museum Badge Placard Overlay -->
+  <g transform="translate(250, 850)">
+    <rect width="300" height="70" rx="6" fill="#1c1b18" stroke="#dfbe76" stroke-width="1.2" opacity="0.92"/>
+    <text x="150" y="28" font-family="serif" font-size="14" fill="#dfbe76" text-anchor="middle" letter-spacing="2">EGYPTIAN MEMORY c. 1954</text>
+    <text x="150" y="50" font-family="sans-serif" font-size="12" fill="#c7c3bb" text-anchor="middle">راديو صالون صمامات خشبي – زمن الفن الجميل</text>
+  </g>
+</svg>

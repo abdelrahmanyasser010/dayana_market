@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#282420"/>
+      <stop offset="60%" stop-color="#161412"/>
+      <stop offset="100%" stop-color="#0a0908"/>
+    </radialGradient>
+    <linearGradient id="walnut" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4d2714"/>
+      <stop offset="35%" stop-color="#69371c"/>
+      <stop offset="70%" stop-color="#3d1e0f"/>
+      <stop offset="100%" stop-color="#2a1409"/>
+    </linearGradient>
+    <radialGradient id="dialPorcelain" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="85%" stop-color="#f5efe0"/>
+      <stop offset="100%" stop-color="#d6caa8"/>
+    </radialGradient>
+    <radialGradient id="brassPendulum" cx="45%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#fff8d8"/>
+      <stop offset="35%" stop-color="#e2bf6e"/>
+      <stop offset="75%" stop-color="#8f722a"/>
+      <stop offset="100%" stop-color="#554112"/>
+    </radialGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="25" stdDeviation="30" flood-color="#000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+
+  <g filter="url(#shadow)" transform="translate(400, 470)">
+    <!-- Architectural Walnut Casework -->
+    <!-- Carved Top Pediment Crest with Finials -->
+    <path d="M -150 -320 L 0 -380 L 150 -320 L 160 -300 L -160 -300 Z" fill="url(#walnut)" stroke="#220e06" stroke-width="2"/>
+    <circle cx="0" cy="-390" r="14" fill="url(#brassPendulum)"/>
+    <circle cx="-150" cy="-330" r="10" fill="url(#brassPendulum)"/>
+    <circle cx="150" cy="-330" r="10" fill="url(#brassPendulum)"/>
+
+    <!-- Main Tall Case Body -->
+    <rect x="-140" y="-300" width="280" height="580" rx="4" fill="url(#walnut)" stroke="#220e06" stroke-width="3"/>
+    
+    <!-- Fluted Side Columns (Corinthian style) -->
+    <rect x="-165" y="-280" width="25" height="540" fill="url(#walnut)" stroke="#1a0a04"/>
+    <rect x="140" y="-280" width="25" height="540" fill="url(#walnut)" stroke="#1a0a04"/>
+
+    <!-- Glass Door Interior Recess -->
+    <rect x="-115" y="-270" width="230" height="520" rx="4" fill="#120e0a" stroke="url(#walnut)" stroke-width="6"/>
+
+    <!-- Upper Clock Dial Assembly -->
+    <g transform="translate(0, -140)">
+      <!-- Brass Outer Bezel -->
+      <circle cx="0" cy="0" r="102" fill="url(#brassPendulum)" stroke="#3a2707" stroke-width="3"/>
+      <!-- Two-piece Porcelain Dial -->
+      <circle cx="0" cy="0" r="92" fill="url(#dialPorcelain)"/>
+      <circle cx="0" cy="0" r="48" fill="none" stroke="#222" stroke-width="0.8"/>
+
+      <!-- Roman Numerals -->
+      <g font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#151515" text-anchor="middle" dominant-baseline="central">
+        <text x="0" y="-72">XII</text>
+        <text x="36" y="-62">I</text>
+        <text x="62" y="-36">II</text>
+        <text x="72" y="0">III</text>
+        <text x="62" y="36">IV</text>
+        <text x="36" y="62">V</text>
+        <text x="0" y="72">VI</text>
+        <text x="-36" y="62">VII</text>
+        <text x="-62" y="36">VIII</text>
+        <text x="-72" y="0">IX</text>
+        <text x="-62" y="-36">X</text>
+        <text x="-36" y="-62">XI</text>
+      </g>
+
+      <!-- Twin Winding Arbors (holes) -->
+      <circle cx="-30" cy="20" r="5" fill="#111" stroke="url(#brassPendulum)" stroke-width="1.5"/>
+      <circle cx="30" cy="20" r="5" fill="#111" stroke="url(#brassPendulum)" stroke-width="1.5"/>
+
+      <!-- Filigree Blued Steel Hands (pointing to 10:10) -->
+      <line x1="0" y1="0" x2="-40" y2="-40" stroke="#1f2d3d" stroke-width="4" stroke-linecap="round"/>
+      <line x1="0" y1="0" x2="45" y2="-45" stroke="#1f2d3d" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="0" cy="0" r="6" fill="url(#brassPendulum)"/>
+    </g>
+
+    <!-- Lower Weight & Pendulum Assembly -->
+    <!-- Hanging brass weight -->
+    <line x1="-30" y1="-40" x2="-30" y2="40" stroke="#888" stroke-width="1.5"/>
+    <rect x="-42" y="40" width="24" height="60" rx="4" fill="url(#brassPendulum)" stroke="#3a2807" stroke-width="2"/>
+    
+    <line x1="30" y1="-40" x2="30" y2="40" stroke="#888" stroke-width="1.5"/>
+    <rect x="18" y="40" width="24" height="60" rx="4" fill="url(#brassPendulum)" stroke="#3a2807" stroke-width="2"/>
+
+    <!-- Pendulum Rod with Heavy Brass Bob -->
+    <line x1="0" y1="-40" x2="0" y2="170" stroke="#4a300a" stroke-width="5"/>
+    <circle cx="0" cy="170" r="52" fill="url(#brassPendulum)" stroke="#4a300a" stroke-width="3"/>
+    <circle cx="0" cy="170" r="42" fill="none" stroke="#ffeaa0" stroke-width="2"/>
+    <circle cx="0" cy="170" r="10" fill="#3a2608"/>
+
+    <!-- Bottom Scalloped Finial Base -->
+    <path d="M -140 280 L 0 340 L 140 280 Z" fill="url(#walnut)" stroke="#1a0a04" stroke-width="2"/>
+    <circle cx="0" cy="345" r="12" fill="url(#brassPendulum)"/>
+  </g>
+
+  <!-- Museum Badge Placard Overlay -->
+  <g transform="translate(250, 850)">
+    <rect width="300" height="70" rx="6" fill="#1c1b18" stroke="#dfbe76" stroke-width="1.2" opacity="0.92"/>
+    <text x="150" y="28" font-family="serif" font-size="14" fill="#dfbe76" text-anchor="middle" letter-spacing="2">VIENNA HOROLOGY c. 1890</text>
+    <text x="150" y="50" font-family="sans-serif" font-size="12" fill="#c7c3bb" text-anchor="middle">ساعة حائط ريجوليتور بندولية – فيينا، النمسا</text>
+  </g>
+</svg>

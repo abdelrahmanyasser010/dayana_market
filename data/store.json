@@ -1,0 +1,612 @@
+{
+  "version": 5,
+  "meta": {
+    "demoData": false,
+    "seedName": "diana-antique-v2",
+    "seededAt": "2026-10-31T18:30:00.000Z",
+    "note": "Diana Antique - Curated Marketplace & Living History Museum catalogue"
+  },
+  "products": [
+    {
+      "id": "ant_gramophone_12000",
+      "slug": "classic-antique-gramophone",
+      "name": "جراموفون كلاسيكي نادر",
+      "nameEn": "Classic Antique Acoustic Gramophone",
+      "subtitle": "من أوائل القرن العشرين بنفير نحاسي بتلات الزهور ومحرك ميكانيكي سليم",
+      "subtitleEn": "Turn-of-the-century acoustic gramophone with hand-fluted brass flower horn",
+      "description": "تحفة موسيقية ميكانيكية نادرة تعيدك إلى زمن النغم الأول. يتميز بنفير نحاسي ضخم ومطروق يدوياً على هيئة بتلات زهرة متفتحة، يرتكز على صندوق فاخر من خشب الماهوجني المصقول مع محرك زنبركي ملفوف يدوياً بواسطة ذراع نحاسي.\n\nينقل الصوت الأكوستيكي الطبيعي لأسطوانات الشمع والحجر بدفء ونقاء ساحر، ويأتي مزوداً برأس صوت وإبر جديدة ليعزف ألحان الزمن الجميل فور وصوله.",
+      "descriptionEn": "A breathtaking centerpiece from the Edwardian acoustic audio era. Boasts a massive hand-hammered brass fluted flower horn, rich mahogany sound box, and a robust hand-cranked spring motor driving shellac 78 RPM records with sublime warmth.",
+      "price": 12000,
+      "compareAtPrice": 14500,
+      "category": "vintage-audio",
+      "collection": "rare-masterpieces",
+      "status": "PUBLISHED",
+      "colors": [
+        { "name": "نحاس أصفر وخشب ماهوجني", "value": "#8c6527" }
+      ],
+      "sizes": ["قطعة فريدة"],
+      "variants": [
+        {
+          "id": "var_gram_01",
+          "sku": "DIANA-GRM-12K",
+          "color": "نحاس أصفر وخشب ماهوجني",
+          "size": "قطعة فريدة",
+          "stock": 1,
+          "lowStockAt": 1,
+          "active": true
+        }
+      ],
+      "images": [
+        "/media/extracted/prod_classic_gramophone.webp",
+        "/uploads/products/gramophone/gramophone-1.svg"
+      ],
+      "spinFrames": [
+        "/media/extracted/prod_classic_gramophone.webp",
+        "/uploads/products/gramophone/gramophone-1.svg"
+      ],
+      "featured": true,
+      "isNew": true,
+      "material": "نحاس أصفر مطروق يدوياً، خشب ماهوجني، زنبرك فولاذي",
+      "fit": "قطعة صالونات ومتاحف كبرى",
+      "care": "يُحفظ الخشب بزيت بذر الكتان، ويلمع النفير بملمع نحاس خالي من الأحماض",
+      "eraId": "1900-1920",
+      "eraLabel": "القرن العشرين (1900–1920)",
+      "eraLabelEn": "Early 20th Century (1900–1920)",
+      "origin": "إنجلترا (لندن) – ماركة His Master's Voice",
+      "originEn": "London, England (His Master's Voice)",
+      "originalUsage": "تشغيل الأسطوانات الموسيقية الحجرية في السرايات والنوادي الثقافية",
+      "originalUsageEn": "Acoustic shellac record playback in grand residences and cultural salons",
+      "conditionState": "ممتازة – محرك الزنبرك قوي، النفير سليم تماماً",
+      "conditionStateEn": "Excellent – Strong spring drive, intact brass flower horn",
+      "authenticity": "مؤكدة (أصلي 100%)",
+      "authenticityEn": "Verified Authentic Edwardian Antique",
+      "rarity": "نادر جداً – تحفة متحفية",
+      "rarityEn": "Museum Grade – Exceptionally Rare",
+      "dimensions": "ارتفاع النفير 72 سم، القاعدة 40 × 40 سم",
+      "weight": "8.5 كجم",
+      "yearCirca": "حوالي 1912",
+      "isEgyptianHeritage": true,
+      "relatedArticleSlug": "gramophone-era-first-recordings",
+      "story": {
+        "eraContext": "في مطلع القرن العشرين، كان الجراموفون هو الوسيلة الوحيدة لنقل الموسيقى والغناء إلى المنازل بدون وجود كهرباء أو إذاعة.",
+        "originAndUsage": "يتم تدوير المانيفيلّا لشد الزنبرك، ثم توضع الإبرة الفولاذية على مسار الأسطوانة الحجرية لتهتز الميكا وتكبر الموجات الصوتية داخل النفير.",
+        "designAndMaterials": "نفير النحاس الأصفر المطروق يتخذ شكل الزهرة ذات الأضلاع المقعرة، والتي تضمن توزيعاً متناغماً للترددات الصوتية في أرجاء المكان.",
+        "historicalNotes": "استمع به جمهور مصر إلى أوائل أسطوانات سيد درويش ومنيرة المهدية وتسجيلات تخت الشيخ سلامة حجازي التاريخية.",
+        "rarityNotes": "الجراموفونات ذات النفير النحاسي الأصلي الكامل والمحرك الزنبركي السليم تعد من أندر القطع وأعلاها قيمة في المزادات العالمية."
+      }
+    },
+    {
+      "id": "ant_french_clock_9200",
+      "slug": "french-antique-table-clock",
+      "name": "ساعة طاولة فرنسية مذهبة",
+      "nameEn": "French Ornate Ormolu Mantel Clock",
+      "subtitle": "طراز لويس الخامس عشر من البرونز المذهب وميناء أرقام رومانية محفورة",
+      "subtitleEn": "Gilded ormolu French mantel clock with Roman numerals and chime",
+      "description": "ساعة طاولة فرنسية فاخرة مصنوعة من البرونز المذهب (Ormolu). تتألق بنقوش كلاسيكية فرنسية دقيقة، وميناء زجاجي مقعر يكشف عن عقارب نحاسية مصقولة بدقة فائقة.\n\nالماكينة الميكانيكية خضعت للصيانة والتنظيف وتعمل بنظام التعبئة بالمفتاح الأصلي لتعطي دقات منتظمة ورنيناً موسيقياً رخيماً كل نصف ساعة.",
+      "descriptionEn": "An exquisite French ormolu mantel clock in Louis XV style. Cast in gilded bronze with hand-chiseled rococo flourishes, porcelain cartouche Roman numerals, and a tuned bell striking the half hours.",
+      "price": 9200,
+      "compareAtPrice": 11000,
+      "category": "antiques-clocks",
+      "collection": "rare-masterpieces",
+      "status": "PUBLISHED",
+      "colors": [
+        { "name": "برونز مذهب عتيق", "value": "#c5a880" }
+      ],
+      "sizes": ["قطعة فريدة"],
+      "variants": [
+        {
+          "id": "var_clk_fr_01",
+          "sku": "DIANA-CLK-FR-92",
+          "color": "برونز مذهب عتيق",
+          "size": "قطعة فريدة",
+          "stock": 1,
+          "lowStockAt": 1,
+          "active": true
+        }
+      ],
+      "images": [
+        "/media/extracted/prod_french_clock.webp",
+        "/uploads/products/vienna-clock/clock-1.svg"
+      ],
+      "spinFrames": [
+        "/media/extracted/prod_french_clock.webp",
+        "/uploads/products/vienna-clock/clock-1.svg"
+      ],
+      "featured": true,
+      "isNew": true,
+      "material": "برونز مذهب مسبوك يدوياً، ميناء بورسلين وزجاج مقعر",
+      "fit": "ساعة طاولة أو مدفأة أو صالون",
+      "care": "يُمسح بفرشاة ناعمة وجافة وتجنب ملمعات المعادن الكيميائية للحفاظ على التذهيب الأصلي",
+      "eraId": "1800-1900",
+      "eraLabel": "القرن التاسع عشر (1800–1900)",
+      "eraLabelEn": "19th Century (1800–1900)",
+      "origin": "فرنسا (باريس)",
+      "originEn": "Paris, France",
+      "originalUsage": "تزيين صالونات القصور وتحديد الوقت بدقات موسيقية راقية",
+      "originalUsageEn": "Palatial salon mantelpiece timekeeping and acoustic chime",
+      "conditionState": "ممتازة – تم فحص الماكينة وتعمل بكفاءة تامة بالمفتاح",
+      "conditionStateEn": "Excellent – Serviced mechanical movement, original key included",
+      "authenticity": "مؤكدة (أصلي موثق بختم الصانع)",
+      "authenticityEn": "Verified Period French Horology",
+      "rarity": "قطعة اقتناء نادرة",
+      "rarityEn": "Rare Collector Grade",
+      "dimensions": "44 × 28 × 16 سم",
+      "weight": "6.8 كجم",
+      "yearCirca": "حوالي 1880",
+      "isEgyptianHeritage": false,
+      "relatedArticleSlug": "vienna-regulator-clockmaking",
+      "story": {
+        "eraContext": "خلال القرن التاسع عشر في فرنسا، كانت ساعات الطاولة البرونزية المذهبة رمزاً للفخامة المعمارية في صالونات النبلاء.",
+        "originAndUsage": "تعمل بحركة ميكانيكية ذات بندول قصير وتُلف أسبوعياً بواسطة مفتاح ذو فتحتين، إحداهما للتوقيت والأخرى لزنبرك الرنين.",
+        "designAndMaterials": "البرونز مسبوك بتقنية الشمع المفقود ومغطى بطبقة ذهبية عتيقة تمنحه بريقاً دافئاً لا يخبو.",
+        "historicalNotes": "اقتنتها العائلات الأرستقراطية في القاهرة والإسكندرية لتزيين صالونات قصر عابدين والبيوت العريقة.",
+        "rarityNotes": "الساعات الفرنسية المحتفظة بتذهيبها الأصلي ومفتاحها وبندولها تعد من أثمن القطع في صالات المزادات."
+      }
+    },
+    {
+      "id": "ant_phone_english_7800",
+      "slug": "vintage-english-rotary-phone",
+      "name": "تليفون إنجليزي قديم بقرص دوار",
+      "nameEn": "Antique English Rotary Desk Telephone",
+      "subtitle": "طراز كلاسيكي ملكي من الباكليت والقرص النحاسي المذهب مع جرسين رنانين",
+      "subtitleEn": "King George era antique black bakelite telephone with polished brass dial",
+      "description": "تليفون أرضي إنجليزي نادر يعود لمنتصف القرن العشرين. صُنع من خامة الباكليت الأسود الثقيل، ومزود بقرص دوار مذهب ناعم التدوير مع جرسين نحاسيين داخليين يصدران الرنين الكلاسيكي الرنان.\n\nخضع للفحص الشامل، القرص يدور بنعومة ويعود تلقائياً لوضعه، وسلك القماش المجدول سليم بدون تلف.",
+      "descriptionEn": "An authentic English rotary desk telephone. Cast in heavy black Bakelite with gleaming brass dial and dual mechanical bells. Meticulously inspected with its original cloth-bound cord.",
+      "price": 7800,
+      "compareAtPrice": 9000,
+      "category": "vintage-phones",
+      "collection": "rare-masterpieces",
+      "status": "PUBLISHED",
+      "colors": [
+        { "name": "باكليت أسود ونحاس", "value": "#151515" }
+      ],
+      "sizes": ["قطعة فريدة"],
+      "variants": [
+        {
+          "id": "var_phn_en_01",
+          "sku": "DIANA-PHN-ENG-78",
+          "color": "باكليت أسود ونحاس",
+          "size": "قطعة فريدة",
+          "stock": 1,
+          "lowStockAt": 1,
+          "active": true
+        }
+      ],
+      "images": [
+        "/media/extracted/prod_english_phone.webp",
+        "/media/extracted/detail_phone_large.webp",
+        "/uploads/products/vintage-phone/phone-1.svg"
+      ],
+      "spinFrames": [
+        "/media/extracted/prod_english_phone.webp",
+        "/media/extracted/detail_phone_large.webp"
+      ],
+      "featured": true,
+      "isNew": true,
+      "material": "باكليت أسود مصقول، قرص نحاسي مذهب، سلك قماشي مجدول",
+      "fit": "قطعة مكاتب وصالونات راقية",
+      "care": "يُمسح بقطعة قماش ناعمة للحفاظ على بريق الباكليت الطبيعي",
+      "eraId": "1920-1940",
+      "eraLabel": "القرن العشرين (1920–1940)",
+      "eraLabelEn": "1920–1940 Era",
+      "origin": "إنجلترا (مستورد لمصر زمان)",
+      "originEn": "England (Egyptian Historical Import)",
+      "originalUsage": "الاتصالات الأرضية والمراسلات الهاتفية في أرقى الصالونات والمكاتب",
+      "originalUsageEn": "Executive rotary landline telecommunications",
+      "conditionState": "ممتازة – فحص كامل للقرص والسلك والجرس الداخلي",
+      "conditionStateEn": "Excellent – Dial return and bells fully operational",
+      "authenticity": "مؤكدة (أصلي تاريخي)",
+      "authenticityEn": "Verified Period Original Antique",
+      "rarity": "قطعة اقتناء نادرة",
+      "rarityEn": "Rare Collector Grade",
+      "dimensions": "26 × 19 × 15 سم",
+      "weight": "2.4 كجم",
+      "yearCirca": "حوالي 1935",
+      "isEgyptianHeritage": true,
+      "relatedArticleSlug": "bakelite-design-wonder",
+      "story": {
+        "eraContext": "فترة الثلاثينيات شهدت بداية انتشار الهواتف الأرضية المنزلية الفاخرة في المدن الكبرى كالقاهرة ولندن.",
+        "originAndUsage": "كان المستخدم يدير القرص النحاسي لكل رقم، فيصدر الهاتف نبضات ميكانيكية يعقبها رنين الأجراس النحاسية الداخلية الصافية.",
+        "designAndMaterials": "الباكليت المعزول والقرص المذهب كانا يمنحان الهاتف وزناً وثباتاً لا يتزحزح على طاولات الصالونات العريقة.",
+        "historicalNotes": "استُخدم في كبرى مباني وسط البلد وسفارات القاهرة في العصر الملكي.",
+        "rarityNotes": "الهواتف الإنجليزية المحتفظة بالقرص النحاسي المذهب وبطاقة الأرقام الأصلية تعتبر نادرة جداً اليوم."
+      }
+    },
+    {
+      "id": "ant_chinese_vase_6200",
+      "slug": "antique-chinese-porcelain-vase",
+      "name": "فازة صينية قديمة مزخرفة",
+      "nameEn": "Antique Chinese Hand-Painted Porcelain Vase",
+      "subtitle": "خزف أزرق وأبيض كلاسيكي بنقوش نباتية وتنين مرسوم باليد مع قاعدة نحاسية",
+      "subtitleEn": "Classic blue and white porcelain vase with hand-painted floral dragons",
+      "description": "فازة خزفية صينية أصلية مصنوعة يدوياً بتقنية الخزف الأزرق والأبيض الشهيرة (Blue and White Porcelain). تتألق بنقوش زهرية إمبراطورية ورسوم دقيقة تم رسمها باليد بصبغة الكوبالت الطبيعية.\n\nخالية تماماً من الشروخ أو الكسور، ومزينة بقاعدة نحاسية عتيقة مسبوكة خصيصاً لحمايتها وإبراز هيبتها في أي صالون أو مجلس.",
+      "descriptionEn": "An authentic Chinese hand-painted blue and white porcelain vase. Adorned with delicate botanical tendrils and imperial mythical motifs painted in rich natural cobalt glaze. Preserved in pristine structural condition.",
+      "price": 6200,
+      "compareAtPrice": 7500,
+      "category": "copper-brass",
+      "collection": "rare-masterpieces",
+      "status": "PUBLISHED",
+      "colors": [
+        { "name": "خزف أزرق وأبيض", "value": "#204060" }
+      ],
+      "sizes": ["قطعة فريدة"],
+      "variants": [
+        {
+          "id": "var_vase_01",
+          "sku": "DIANA-VASE-62",
+          "color": "خزف أزرق وأبيض",
+          "size": "قطعة فريدة",
+          "stock": 1,
+          "lowStockAt": 1,
+          "active": true
+        }
+      ],
+      "images": [
+        "/media/extracted/prod_chinese_vase.webp",
+        "/uploads/products/brass-tray/tray-1.svg"
+      ],
+      "spinFrames": [
+        "/media/extracted/prod_chinese_vase.webp"
+      ],
+      "featured": true,
+      "isNew": false,
+      "material": "بورسلين وخزف صيني مطلي يدوياً بالكوبالت، قاعدة نحاسية",
+      "fit": "تحفة صالونات ومداخل وديكور فاخر",
+      "care": "تُنظف بقطعة قماش ناعمة ومبللة بماء فاتر وتجفف فوراً",
+      "eraId": "1800-1900",
+      "eraLabel": "القرن التاسع عشر (1800–1900)",
+      "eraLabelEn": "19th Century",
+      "origin": "الصين (مستوردة عبر طريق الحرير وبحار الشرق)",
+      "originEn": "China (Antique Export Heritage)",
+      "originalUsage": "تزيين القصور والدواوين الكبرى بأواني الخزف الإمبراطوري",
+      "originalUsageEn": "Imperial palace domestic decoration and floral display",
+      "conditionState": "ممتازة – طلاء الكوبالت ناصع، خالية من الشروخ والكسور",
+      "conditionStateEn": "Excellent – Intact cobalt glaze, zero hairline cracks",
+      "authenticity": "مؤكدة (خزف عتيق أصلي)",
+      "authenticityEn": "Verified Authentic Antique Porcelain",
+      "rarity": "قطعة فريدة مميزة",
+      "rarityEn": "Distinctive Collector Piece",
+      "dimensions": "ارتفاع 48 سم، قطر 22 سم",
+      "weight": "4.1 كجم",
+      "yearCirca": "أواخر القرن التاسع عشر",
+      "isEgyptianHeritage": false,
+      "relatedArticleSlug": "antique-collector-verification-guide",
+      "story": {
+        "eraContext": "كان الخزف الصيني الأزرق والأبيض محل شغف النبلاء وهواة جمع التحف في مصر وأوروبا منذ عصر أسرة تشينغ.",
+        "originAndUsage": "تُصنع من طين الكاولين النقي وتُحرق في أفران بدرجات حرارة تفوق 1300 درجة مئوية لتكتسب صلابة تشبه الزجاج ورنيناً موسيقياً عند النقر.",
+        "designAndMaterials": "الرسم باليد بصبغة الكوبالت يعطي تبايناً لونياً أزرق غنياً لا يبهت على مر القرون.",
+        "historicalNotes": "زينت هذه الفازات صالونات بيوت القاهرة التاريخية في حي الحلمية وجاردن سيتي ومصر الجديدة.",
+        "rarityNotes": "سلامة الخزف الصيني القديم من الشروخ والترميمات الحديثة يرفع قيمته الاستثمارية لدى المقتنين."
+      }
+    },
+    {
+      "id": "ant_camera_german_8500",
+      "slug": "classic-german-film-camera",
+      "name": "كاميرا ألمانية كلاسيكية 35mm",
+      "nameEn": "Classic German 35mm Rangefinder Camera",
+      "subtitle": "شاسيه كرومي صلب مع جلد أسود وعدسة زجاجية ألمانية نقية f/2.0",
+      "subtitleEn": "Precision mechanical German rangefinder with prime optics and shutter speeds",
+      "description": "تحفة الهندسة البصرية والميكانيكية الألمانية. تتميز بهيكل معدني صلب مكسو بالجلد الأسود الفاخر، وعدسة برايم ألمانية فائقة الحدة والوضوح، وشاتر ميكانيكي يعمل بجميع السرعات دون الحاجة لأي بطاريات.\n\nتأتي مع حقيبتها الجلدية الأصلية وبكرة فيلم تجريبية، قطعة مثالية لهواة التوثيق الفوتوغرافي التناظري وعشاق المقتنيات الميكانيكية الدقيقة.",
+      "descriptionEn": "A masterpiece of German mechanical precision. Features an all-metal chassis in chrome and textured vulcanite leather, razor-sharp f/2.0 optical glass, and tactile mechanical rangefinder gearing. Tested and verified across all speeds.",
+      "price": 8500,
+      "compareAtPrice": 9800,
+      "category": "vintage-cameras",
+      "collection": "rare-masterpieces",
+      "status": "PUBLISHED",
+      "colors": [
+        { "name": "كروم وجلد أسود", "value": "#2b2b2b" }
+      ],
+      "sizes": ["قطعة فريدة"],
+      "variants": [
+        {
+          "id": "var_cam_de_01",
+          "sku": "DIANA-CAM-DE-85",
+          "color": "كروم وجلد أسود",
+          "size": "قطعة فريدة",
+          "stock": 1,
+          "lowStockAt": 1,
+          "active": true
+        }
+      ],
+      "images": [
+        "/media/extracted/prod_camera_german.webp",
+        "/uploads/products/vintage-camera/camera-1.svg"
+      ],
+      "spinFrames": [
+        "/media/extracted/prod_camera_german.webp",
+        "/uploads/products/vintage-camera/camera-1.svg"
+      ],
+      "featured": true,
+      "isNew": true,
+      "material": "سبائك الكروم والصلب، جلد ألماني محبب، زجاج بصري نقي",
+      "fit": "كاميرا فيلمية محمولة كلاسيكية",
+      "care": "تُحفظ داخل حقيبتها في مكان جاف بعيداً عن الرطوبة وتُنظف العدسة بمنديل بصريات خاص",
+      "eraId": "1940-1960",
+      "eraLabel": "منتصف القرن العشرين (1940–1960)",
+      "eraLabelEn": "Mid-20th Century",
+      "origin": "ألمانيا (شتوتغارت / فيتسلار)",
+      "originEn": "Germany (Wetzlar / Stuttgart)",
+      "originalUsage": "التصوير الصحفي وتوثيق معالم المدن والرحلات على أفلام 35mm",
+      "originalUsageEn": "Photojournalism and street documentation on 35mm analog film",
+      "conditionState": "ممتازة – تم فحص الشاتر والعدسة والفوكس، تعمل ميكانيكياً بكفاءة",
+      "conditionStateEn": "Excellent – Mechanical shutter, aperture, and rangefinder fully tested",
+      "authenticity": "مؤكدة (أصلية برقم تسلسلي محفور)",
+      "authenticityEn": "Verified Authentic German Precision",
+      "rarity": "قطعة اقتناء نادرة",
+      "rarityEn": "Rare Collector Grade",
+      "dimensions": "14 × 9 × 7.5 سم",
+      "weight": "820 جم",
+      "yearCirca": "حوالي 1955",
+      "isEgyptianHeritage": false,
+      "relatedArticleSlug": "classic-film-cameras-revival",
+      "story": {
+        "eraContext": "الكاميرات الألمانية بعد الحرب العالمية الثانية كانت المعيار الذهبي المطلق لجميع مصوري العالم في الدقة والصلابة الميكانيكية.",
+        "originAndUsage": "كان المصور يضبط حلقة فتحة العدسة والفوكس اليدوي عبر محدد المدى المزدوج، ليلتقط لقطات ذات عمق لوني فريد على أفلام الأبيض والأسود.",
+        "designAndMaterials": "التروس مسبوكة من البرونز والصلب المقاوم للتآكل، والعدسة مصقولة يدوياً من زجاج بصري فائق النقاوة.",
+        "historicalNotes": "استخدمها أشهر مصوري الصحافة المصرية في توثيق أحداث الخمسينيات وحياة الشارع القاهري.",
+        "rarityNotes": "وجود العدسة خالية من الفطريات (Fungus) مع عمل الشاتر بدقة في جميع السرعات يجعلها كنزاً حقيقياً للمقتنين."
+      }
+    },
+    {
+      "id": "ant_radio_vintage_4700",
+      "slug": "vintage-wooden-tube-radio",
+      "name": "راديو صالون خشبي قديم",
+      "nameEn": "Vintage Wooden Valve Console Radio",
+      "subtitle": "كابينة خشب جوز مع شاشة زجاجية مضيئة لمحطات إذاعة القاهرة وصوت العرب",
+      "subtitleEn": "Mid-century wooden tube radio with glowing stations dial and Magic Eye",
+      "description": "أيقونة الصالونات المصرية في عصر الفن الجميل. راديو كلاسيكي فاخر بكابينة من خشب الجوز المصقول، ونظام صمامات مفرغة (Vacuum Tubes) يمنح الصوت التناظري دفئاً لا تضاهيه الأجهزة الحديثة.\n\nتتألق شاشته الزجاجية الأصلية بأسماء محطات إذاعة زمان (هنا القاهرة، صوت العرب، لندن، باريس)، ويعمل مع مكبر صوته الداخلي الأصلي ليعيدك إلى الخميس الأول من كل شهر وأمسيات أم كلثوم الخالدة.",
+      "descriptionEn": "An evocative cultural icon of mid-century Egypt. Housed in a polished walnut cabinet with glowing glass station dial displaying 'Here is Cairo' and 'Voice of the Arabs'. Equipped with warm vacuum tubes and the legendary green tuning Magic Eye.",
+      "price": 4700,
+      "compareAtPrice": 5500,
+      "category": "vintage-audio",
+      "collection": "egyptian-memory",
+      "status": "PUBLISHED",
+      "colors": [
+        { "name": "خشب جوز مصقول", "value": "#5c3319" }
+      ],
+      "sizes": ["قطعة فريدة"],
+      "variants": [
+        {
+          "id": "var_rad_01",
+          "sku": "DIANA-RAD-47",
+          "color": "خشب جوز مصقول",
+          "size": "قطعة فريدة",
+          "stock": 1,
+          "lowStockAt": 1,
+          "active": true
+        }
+      ],
+      "images": [
+        "/media/extracted/prod_wooden_radio.webp",
+        "/uploads/products/vintage-radio/radio-1.svg"
+      ],
+      "spinFrames": [
+        "/media/extracted/prod_wooden_radio.webp",
+        "/uploads/products/vintage-radio/radio-1.svg"
+      ],
+      "featured": true,
+      "isNew": false,
+      "material": "كابينة خشبية بقشرة الجوز، صمامات زجاجية مفرغة، شبك قماشي ذهبي",
+      "fit": "قطعة صالونات مركزية فاخرة",
+      "care": "يُفضل توصيله بمحول كهربائي مناسب، وتنظيف الواجهة الزجاجية بقطعة ناعمة",
+      "eraId": "1940-1960",
+      "eraLabel": "منتصف القرن العشرين (1940–1960)",
+      "eraLabelEn": "Mid-20th Century",
+      "origin": "مصر / تجميع واستيراد رسمي ماركة فيليبس",
+      "originEn": "Philips Egypt official assembly and domestic import",
+      "originalUsage": "الاستماع الإذاعي في الصالون المصري وبث حفلات أم كلثوم ونشرات الأخبار",
+      "originalUsageEn": "Living room family radio, live Om Kalthoum concerts, and national broadcasts",
+      "conditionState": "ممتازة – الصمامات سليمة وتضيء، الهيكل الخشبي ملمع، مكبر الصوت يعمل",
+      "conditionStateEn": "Warm illuminated tubes, polished cabinet, operational speaker & magic eye",
+      "authenticity": "مؤكدة (أصلي تاريخي)",
+      "authenticityEn": "Verified Historical Egyptian Heritage",
+      "rarity": "قطعة نوستالجيا محبوبة ونادرة بحالتها الأصلية",
+      "rarityEn": "Beloved Egyptian Vintage Nostalgia",
+      "dimensions": "58 × 36 × 26 سم",
+      "weight": "8.6 كجم",
+      "yearCirca": "حوالي 1954",
+      "isEgyptianHeritage": true,
+      "relatedArticleSlug": "egyptian-salons-vintage-life",
+      "story": {
+        "eraContext": "في خمسينيات القرن الماضي كان الراديو هو نبض البيوت ومصدر المعرفة والبهجة، ويتحلق حوله الكبار والصغار كل مساء.",
+        "originAndUsage": "كانت تلتف العائلات في الخميس الأول من كل شهر للاستماع لحفل كوكب الشرق أم كلثوم، ومتابعة برامج أبلة فضيلة ونشرات أحمد سعيد.",
+        "designAndMaterials": "الكابينة الخشبية صُممت كصندوق رنين صوتي احترافي يمنح الترددات المنخفضة صدى طبيعياً فخماً لا تضاهيه الأجهزة البلاستيكية الحديثة.",
+        "historicalNotes": "وجود أسماء محطات الإذاعة القديمة المطبوعة مباشرة على الشاشة الزجاجية يوثق خريطة العالم الإذاعية في منتصف القرن العشرين.",
+        "rarityNotes": "ندرة هذه الأجهزة تكمن في سلامة الشاشة الزجاجية من الكسر وعمل الصمامات والعين السحرية دون تعديلات حديثة مشوهة."
+      }
+    },
+    {
+      "id": "ant_tray_brass_3200",
+      "slug": "carved-antique-brass-plate",
+      "name": "طاسة وصينية نحاسية مزخرفة",
+      "nameEn": "Hand-Chiseled Antique Brass Plate Tray",
+      "subtitle": "حفر يدوي دقيق بالإزميل والمطرقة بنقوش أرابيسك ودمغة خان الخليلي بالقاهرة",
+      "subtitleEn": "Heavy hand-chiseled arabesque brass plate with classical Cairo hallmarks",
+      "description": "إبداع يدوي متوارث من أسطوات النحاس في خان الخليلي وحي الجمالية بالقاهرة الفاطمية. الصينية محفورة بالكامل بالإزميل والمطرقة بنقوش هندسية إسلامية دقيقة وأبيات شعرية تفيض بالكرم وحسن الضيافة، مقتنى تراثي أصيل يحمل عبق المقاهي المصرية العريقة.\n\nتتميز بوزن نحاسي ثقيل وباتينا زمنية أصلية تمنحها وقار التاريخ، ومزودة بمقبضين مسبوكين من النحاس الخالص.",
+      "descriptionEn": "A splendid authentic hand-chiseled brass tray originating from the legendary coppersmiths of Khan el-Khalili, Cairo. Richly decorated with floral arabesques and classical Arabic blessings, carrying genuine time-worn patina.",
+      "price": 3200,
+      "compareAtPrice": 3800,
+      "category": "copper-brass",
+      "collection": "egyptian-memory",
+      "status": "PUBLISHED",
+      "colors": [
+        { "name": "نحاس أصفر عتيق", "value": "#a68239" }
+      ],
+      "sizes": ["قطعة فريدة"],
+      "variants": [
+        {
+          "id": "var_tray_01",
+          "sku": "DIANA-TRY-32",
+          "color": "نحاس أصفر عتيق",
+          "size": "قطعة فريدة",
+          "stock": 1,
+          "lowStockAt": 1,
+          "active": true
+        }
+      ],
+      "images": [
+        "/media/extracted/prod_brass_plate.webp",
+        "/uploads/products/brass-tray/tray-1.svg"
+      ],
+      "spinFrames": [
+        "/media/extracted/prod_brass_plate.webp",
+        "/uploads/products/brass-tray/tray-1.svg"
+      ],
+      "featured": false,
+      "isNew": false,
+      "material": "نحاس أصفر خالص ثقيل، حفر يدوي بالإزميل",
+      "fit": "صينية صالونات وضيافة كبرى أو جدارية تراثية",
+      "care": "يُفضل ترك الباتينا التاريخية كما هي، أو تلميعها برفق بقطعة قماش ناعمة",
+      "eraId": "1920-1940",
+      "eraLabel": "عصر الفن الجميل (1920–1940)",
+      "eraLabelEn": "1920–1940 Era",
+      "origin": "مصر – خان الخليلي، القاهرة",
+      "originEn": "Khan el-Khalili, Cairo, Egypt",
+      "originalUsage": "تقديم الشاي والقهوة في الدواوين والمنازل المصرية الراقية",
+      "originalUsageEn": "Ceremonial tea and coffee hospitality in distinguished Egyptian residences",
+      "conditionState": "ممتازة – نحاس ثقيل مع باتينا زمنية طبيعية أصلية وبدون انبعاجات",
+      "conditionStateEn": "Heavy solid brass, natural untouched historical patina, zero structural dents",
+      "authenticity": "مؤكدة (أصلي يدوي موثق بختم القاهرة)",
+      "authenticityEn": "Verified Authentic Handcrafted Cairo Heritage",
+      "rarity": "قطعة تراثية أصيلة",
+      "rarityEn": "Heritage Collector Piece",
+      "dimensions": "قطر 55 سم",
+      "weight": "3.2 كجم",
+      "yearCirca": "حوالي 1930",
+      "isEgyptianHeritage": true,
+      "relatedArticleSlug": "egyptian-salons-vintage-life",
+      "story": {
+        "eraContext": "فترة العشرينيات والثلاثينيات شهدت ذروة ازدهار الحرف اليدوية الدقيقة في القاهرة التاريخية، حيث كانت المشغولات النحاسية جزءاً أصيلاً من جهاز العروس المصرية الراقية.",
+        "originAndUsage": "كانت تُستخدم لتقديم الشاي في كؤوس زجاجية مذهبة والقهوة في دلال نحاسية مزخرفة للضيوف في مناسبات الأعياد والمجالس الأدبية.",
+        "designAndMaterials": "النحاس المستخدم سميك ومطروق يدوياً، تتوسطه وردة هندسية ثمانية الأضلاع تحيط بها أبيات شعرية خطت بالخط الثلث والنسخ.",
+        "historicalNotes": "تحمل الصينية في خلفيتها دمغة دار الحرف المصرية القديمة بالقاهرة والتي تعود لثلاثينيات القرن العشرين.",
+        "rarityNotes": "الصواني ذات القطر الكبير المحتفظة بوزنها الثقيل وعدم انبعاج حوافها أصبحت صعبة المنال ومفضلة للمقتنين."
+      }
+    },
+    {
+      "id": "ant_statue_bronze_5600",
+      "slug": "antique-bronze-classical-figurine",
+      "name": "تمثال برونزي كلاسيكي عتيق",
+      "nameEn": "Antique Classical Patinated Bronze Figurine",
+      "subtitle": "سبك يدوي بالشمع المفقود مع باتينا خضراء وبنية كلاسيكية وقاعدة رخامية",
+      "subtitleEn": "Lost-wax cast patinated bronze classical figure on Italian marble base",
+      "description": "منحوتة برونزية فريدة تجسد روح الفن الكلاسيكي القديم. صُبت بتقنية الشمع المفقود التقليدية (Lost-wax casting)، وتكتسي بطبقة باتينا برونزية طبيعية متدرجة تعكس عقوداً من الزمن.\n\nترتكز على قاعدة من الرخام الأسود المعرق، وتحمل لمسات الصانع وحفره اليدوي، مقتنى فني رفيع المستوى لعشاق التماثيل البرونزية والفن الأوروبي والمصري العريق.",
+      "descriptionEn": "An extraordinary patinated bronze sculpture depicting classical elegance. Master-cast in lost wax with warm umber and verdant oxidation, mounted on a solid Nero Marquina marble plinth.",
+      "price": 5600,
+      "compareAtPrice": 6800,
+      "category": "copper-brass",
+      "collection": "rare-masterpieces",
+      "status": "PUBLISHED",
+      "colors": [
+        { "name": "برونز عتيق مع باتينا", "value": "#4a4538" }
+      ],
+      "sizes": ["قطعة فريدة"],
+      "variants": [
+        {
+          "id": "var_statue_01",
+          "sku": "DIANA-STU-56",
+          "color": "برونز عتيق مع باتينا",
+          "size": "قطعة فريدة",
+          "stock": 1,
+          "lowStockAt": 1,
+          "active": true
+        }
+      ],
+      "images": [
+        "/media/extracted/prod_bronze_statue.webp",
+        "/media/extracted/story_sculpture_card.webp"
+      ],
+      "spinFrames": [
+        "/media/extracted/prod_bronze_statue.webp"
+      ],
+      "featured": false,
+      "isNew": false,
+      "material": "برونز نقي مصبوب، قاعدة رخامية طبيعية",
+      "fit": "قطعة مكاتب ومكتبات وصالونات رفيعة",
+      "care": "تُنظف بفرشاة حريرية ناعمة جافة بدون أي سوائل",
+      "eraId": "1800-1900",
+      "eraLabel": "القرن التاسع عشر (1800–1900)",
+      "eraLabelEn": "19th Century",
+      "origin": "فرنسا / إيطاليا",
+      "originEn": "France / Italy",
+      "originalUsage": "تزيين المكتبات الشخصية والمجالس الفنية الراقية",
+      "originalUsageEn": "Classical library and executive salon artistic decoration",
+      "conditionState": "ممتازة – الباتينا البرونزية متدرجة وسليمة، القاعدة الرخامية محكمة",
+      "conditionStateEn": "Excellent – Intact natural patina, solid marble plinth",
+      "authenticity": "مؤكدة (أصلي عتيق)",
+      "authenticityEn": "Verified Period Bronze Sculpture",
+      "rarity": "قطعة فريدة نادرة",
+      "rarityEn": "Rare Sculptural Collectible",
+      "dimensions": "ارتفاع 36 سم، القاعدة 14 × 14 سم",
+      "weight": "5.3 كجم",
+      "yearCirca": "حوالي 1895",
+      "isEgyptianHeritage": false,
+      "relatedArticleSlug": "antique-collector-verification-guide",
+      "story": {
+        "eraContext": "في أواخر القرن التاسع عشر بلغت حركة صب التماثيل البرونزية الفنية ذروة تألقها في المحترفات الفرنسية والإيطالية.",
+        "originAndUsage": "كانت تُصب كإصدارات محدودة لنخبة المفكرين وعشاق الفن الكلاسيكي لتزيين مكاتب القراءة وغرف الاستقبال.",
+        "designAndMaterials": "البرونز المستخدم يتميز بكثافة عالية ونسبة نحاس وقصدير دقيقة تعطي ثقلاً وبريقاً ناعماً تحت الضوء الدافئ.",
+        "historicalNotes": "اقتناها عدد من رواد النهضة الفكرية في مصر لتزيين صالوناتهم الأدبية.",
+        "rarityNotes": "التماثيل التي لا تزال تحتفظ بقاعدتها الرخامية الأصلية وباتينا القرن التاسع عشر تعتبر قطعاً متحفية مطلوبة."
+      }
+    }
+  ],
+  "orders": [],
+  "customers": [],
+  "discounts": [
+    {
+      "id": "disc_diana_welcome",
+      "name": "خصم ترحيبي لعشاق الأنتيكات",
+      "code": "DIANA10",
+      "type": "PERCENTAGE",
+      "value": 10,
+      "scope": "ORDER",
+      "targetIds": [],
+      "minSubtotal": 1000,
+      "usageCount": 0,
+      "active": true,
+      "createdAt": "2026-10-31T18:30:00.000Z",
+      "updatedAt": "2026-10-31T18:30:00.000Z"
+    }
+  ],
+  "inventoryMovements": [],
+  "settings": {
+    "currency": "EGP",
+    "flatShippingRate": 75,
+    "freeShippingThreshold": 5000,
+    "codEnabled": true,
+    "cardEnabled": true,
+    "lowStockThreshold": 1,
+    "supportPhone": "+201000000000",
+    "supportEmail": "contact@diana-antique.com",
+    "governorateRates": {
+      "cairo": 50,
+      "giza": 50,
+      "alexandria": 65,
+      "qalyubia": 55,
+      "sharqia": 65,
+      "dakahlia": 65,
+      "gharbia": 65,
+      "monufia": 65,
+      "beheira": 70,
+      "damietta": 75,
+      "kafr-el-sheikh": 75,
+      "port-said": 75,
+      "ismailia": 75,
+      "suez": 75,
+      "fayoum": 80,
+      "beni-suef": 80,
+      "minya": 85,
+      "assiut": 85,
+      "sohag": 90,
+      "qena": 95,
+      "luxor": 100,
+      "aswan": 100,
+      "red-sea": 110,
+      "new-valley": 120,
+      "matrouh": 110,
+      "north-sinai": 120,
+      "south-sinai": 120
+    }
+  }
+}

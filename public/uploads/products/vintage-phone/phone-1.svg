@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#2a2824"/>
+      <stop offset="60%" stop-color="#181715"/>
+      <stop offset="100%" stop-color="#0d0d0c"/>
+    </radialGradient>
+    <linearGradient id="bakelite" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3a3a3a"/>
+      <stop offset="35%" stop-color="#1f1f1f"/>
+      <stop offset="70%" stop-color="#111111"/>
+      <stop offset="100%" stop-color="#080808"/>
+    </linearGradient>
+    <linearGradient id="chrome" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#b0b0b0"/>
+      <stop offset="30%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#999999"/>
+      <stop offset="100%" stop-color="#555555"/>
+    </linearGradient>
+    <radialGradient id="brassDial" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff4d0"/>
+      <stop offset="40%" stop-color="#dfbe76"/>
+      <stop offset="85%" stop-color="#8c6f32"/>
+      <stop offset="100%" stop-color="#503d15"/>
+    </radialGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="25" stdDeviation="30" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+
+  <!-- Museum Lighting Accent -->
+  <circle cx="400" cy="450" r="320" fill="#dfbe76" opacity="0.04"/>
+
+  <!-- Pedestal shadow -->
+  <ellipse cx="400" cy="720" rx="260" ry="40" fill="#000" opacity="0.6"/>
+
+  <!-- Phone Main Body -->
+  <g filter="url(#shadow)">
+    <!-- Pyramid Base -->
+    <path d="M 240 680 L 560 680 L 510 440 L 290 440 Z" fill="url(#bakelite)" stroke="#444" stroke-width="1.5"/>
+    <!-- Base Bevel -->
+    <path d="M 230 690 L 570 690 L 560 680 L 240 680 Z" fill="#151515"/>
+    
+    <!-- Cradle Chrome Forks -->
+    <path d="M 330 440 L 330 380 Q 330 360 310 360 L 300 360" fill="none" stroke="url(#chrome)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M 470 440 L 470 380 Q 470 360 490 360 L 500 360" fill="none" stroke="url(#chrome)" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="300" cy="360" r="10" fill="url(#chrome)"/>
+    <circle cx="500" cy="360" r="10" fill="url(#chrome)"/>
+
+    <!-- Rotary Dial Outer Rim -->
+    <circle cx="400" cy="550" r="105" fill="#151515" stroke="url(#chrome)" stroke-width="4"/>
+    <circle cx="400" cy="550" r="95" fill="#f4ebd9"/>
+    
+    <!-- Dial Numbers Ring -->
+    <g font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#1a1a1a" text-anchor="middle" dominant-baseline="central">
+      <text x="400" y="480">1</text>
+      <text x="445" y="495">2</text>
+      <text x="475" y="530">3</text>
+      <text x="478" y="575">4</text>
+      <text x="450" y="612">5</text>
+      <text x="400" y="628">6</text>
+      <text x="350" y="612">7</text>
+      <text x="322" y="575">8</text>
+      <text x="325" y="530">9</text>
+      <text x="355" y="495">0</text>
+    </g>
+
+    <!-- Rotary Clear/Brass Wheel with finger holes -->
+    <circle cx="400" cy="550" r="82" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="3"/>
+    <!-- Finger holes -->
+    <circle cx="400" cy="480" r="14" fill="rgba(255,255,255,0.25)" stroke="#666" stroke-width="1.5"/>
+    <circle cx="445" cy="495" r="14" fill="rgba(255,255,255,0.25)" stroke="#666" stroke-width="1.5"/>
+    <circle cx="475" cy="530" r="14" fill="rgba(255,255,255,0.25)" stroke="#666" stroke-width="1.5"/>
+    <circle cx="478" cy="575" r="14" fill="rgba(255,255,255,0.25)" stroke="#666" stroke-width="1.5"/>
+    <circle cx="450" cy="612" r="14" fill="rgba(255,255,255,0.25)" stroke="#666" stroke-width="1.5"/>
+    <circle cx="400" cy="628" r="14" fill="rgba(255,255,255,0.25)" stroke="#666" stroke-width="1.5"/>
+    <circle cx="350" cy="612" r="14" fill="rgba(255,255,255,0.25)" stroke="#666" stroke-width="1.5"/>
+    <circle cx="322" cy="575" r="14" fill="rgba(255,255,255,0.25)" stroke="#666" stroke-width="1.5"/>
+    <circle cx="325" cy="530" r="14" fill="rgba(255,255,255,0.25)" stroke="#666" stroke-width="1.5"/>
+    <circle cx="355" cy="495" r="14" fill="rgba(255,255,255,0.25)" stroke="#666" stroke-width="1.5"/>
+
+    <!-- Finger stop (metal bracket) -->
+    <path d="M 335 632 L 315 650" stroke="url(#chrome)" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Center Phone Emblem -->
+    <circle cx="400" cy="550" r="32" fill="url(#bakelite)" stroke="url(#chrome)" stroke-width="2"/>
+    <circle cx="400" cy="550" r="24" fill="#dfbe76" opacity="0.9"/>
+    <text x="400" y="555" font-family="serif" font-size="11" font-weight="bold" fill="#222" text-anchor="middle">CAIRO</text>
+
+    <!-- Handset resting on cradle -->
+    <!-- Handle -->
+    <path d="M 200 340 C 270 330 530 330 600 340 L 595 375 C 530 365 270 365 205 375 Z" fill="url(#bakelite)" stroke="#333"/>
+    <!-- Left Earpiece Cup -->
+    <ellipse cx="200" cy="355" rx="48" ry="42" fill="url(#bakelite)" stroke="#444"/>
+    <ellipse cx="195" cy="355" rx="35" ry="32" fill="#151515"/>
+    <!-- Right Mouthpiece Cup -->
+    <ellipse cx="600" cy="355" rx="48" ry="42" fill="url(#bakelite)" stroke="#444"/>
+    <ellipse cx="605" cy="355" rx="35" ry="32" fill="#151515"/>
+
+    <!-- Braided Fabric Cord -->
+    <path d="M 250 670 C 200 700 170 650 180 580 C 190 520 160 480 185 390" fill="none" stroke="#2c2822" stroke-width="9" stroke-dasharray="8 4"/>
+  </g>
+
+  <!-- Museum Badge Placard Overlay -->
+  <g transform="translate(250, 830)">
+    <rect width="300" height="70" rx="6" fill="#1c1b18" stroke="#dfbe76" stroke-width="1.2" opacity="0.92"/>
+    <text x="150" y="28" font-family="serif" font-size="14" fill="#dfbe76" text-anchor="middle" letter-spacing="2">AUTHENTIC ANTIQUE 1950s</text>
+    <text x="150" y="50" font-family="sans-serif" font-size="12" fill="#c7c3bb" text-anchor="middle">تليفون قرص دوار – خامة الباكليت الأصلية</text>
+  </g>
+</svg>
