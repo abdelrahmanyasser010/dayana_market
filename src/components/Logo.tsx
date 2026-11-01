@@ -1,16 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useStore } from "./StoreProvider";
 
-export function Logo({ compact = false, showTagline = true }: { compact?: boolean; showTagline?: boolean }) {
-  const { language } = useStore();
-  const isAr = language === "ar";
-
+export function Logo({ compact = false }: { compact?: boolean }) {
   return (
     <Link
       href="/"
-      className="dianaLogoPlaque"
+      className="headerLogoTab"
       aria-label="ديانا أنتيك - الصفحة الرئيسية"
       title="ديانا أنتيك – Diana Antique"
     >
@@ -77,16 +73,12 @@ export function Logo({ compact = false, showTagline = true }: { compact?: boolea
         </svg>
       </div>
 
-      {/* Brand Names & Tagline */}
+      {/* Brand Names & Tagline (Exact matching mockup, no extra words) */}
       <div className="dianaBrandText">
-        <div className="dianaBrandNamesRow">
-          <span className="dianaArabicName">ديانا أنتيك</span>
-          <span className="dianaEnglishName">Diana Antique</span>
-        </div>
-        {showTagline && (
-          <span className="dianaTagline">
-            {isAr ? "أكثر من مجرد سوق .. رحلة عبر الزمن" : "Beyond A Market .. A Journey In Time"}
-          </span>
+        <span className="dianaArabicName">ديانا أنتيك</span>
+        <span className="dianaEnglishName">Diana Antique</span>
+        {!compact && (
+          <span className="dianaTagline">أكثر من مجرد سوق .. رحلة عبر الزمن</span>
         )}
       </div>
     </Link>
