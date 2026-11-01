@@ -70,19 +70,24 @@ export function Header() {
       exact: true
     },
     {
+      label: isAr ? "متجر المقتنيات" : "Collectibles Shop",
+      href: "/shop",
+      icon: Sparkles
+    },
+    {
+      label: isAr ? "من ذاكرة مصر" : "Egypt Heritage",
+      href: "/heritage",
+      icon: Landmark
+    },
+    {
       label: isAr ? "موسوعة الأنتيكات" : "Encyclopedia",
       href: "/encyclopedia",
       icon: BookOpen
     },
     {
-      label: isAr ? "من ذاكرة مصر" : "Egypt Heritage",
-      href: "/about#heritage",
-      icon: Landmark
-    },
-    {
-      label: isAr ? "لقطة القطع" : "Collectibles",
-      href: "/shop",
-      icon: Sparkles
+      label: isAr ? "حكاية سوق ديانا" : "Diana Story",
+      href: "/about",
+      icon: History
     }
   ];
 
