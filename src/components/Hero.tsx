@@ -46,12 +46,9 @@ const HERO_SLIDES: HeroSlide[] = [
     subtitleEn: "In The World Of Antiques & Fine Relics",
     descAr: "قطع مختارة بعناية.. مع قصص وتاريخ يروي الماضي",
     descEn: "Meticulously curated relics, each carrying verified provenance and a timeless story.",
-    ctaTextAr: "تصفح المقتنيات",
+    ctaTextAr: "تصفح القطع",
     ctaTextEn: "Browse Collectibles",
-    ctaLink: "/shop",
-    secondaryLink: "/about",
-    secondaryTextAr: "قصة ديانا أنتيك",
-    secondaryTextEn: "Our Story"
+    ctaLink: "/shop"
   },
   {
     id: "souq-diana-heritage",
@@ -129,12 +126,6 @@ export function Hero() {
       {/* 2. Interactive HTML Content Layer (Floating on top of image) */}
       <div className="heroContentContainer">
         <div className="heroTextCard">
-          {/* Eyebrow badge */}
-          <div className="heroEyebrow">
-            <Sparkles size={14} className="heroGoldSparkle" />
-            <span>{isAr ? activeSlide.eyebrowAr : activeSlide.eyebrowEn}</span>
-          </div>
-
           {/* Main Title & Subtitle */}
           <h1 className="heroMainTitle">{isAr ? activeSlide.titleAr : activeSlide.titleEn}</h1>
           <h2 className="heroSubTitle">{isAr ? activeSlide.subtitleAr : activeSlide.subtitleEn}</h2>
@@ -149,34 +140,12 @@ export function Hero() {
           {/* Rich Description */}
           <p className="heroDescription">{isAr ? activeSlide.descAr : activeSlide.descEn}</p>
 
-          {/* Action CTAs */}
+          {/* Action CTA Button */}
           <div className="heroActionsGroup">
             <Link href={activeSlide.ctaLink} className="heroPrimaryBtn">
               <span>{isAr ? activeSlide.ctaTextAr : activeSlide.ctaTextEn}</span>
-              <ArrowIcon size={16} className="btnArrow" />
+              <span className="btnArrow" aria-hidden="true">←</span>
             </Link>
-
-            {activeSlide.secondaryLink && (
-              <Link href={activeSlide.secondaryLink} className="heroSecondaryBtn">
-                <span>{isAr ? activeSlide.secondaryTextAr : activeSlide.secondaryTextEn}</span>
-              </Link>
-            )}
-          </div>
-
-          {/* Live Guarantees Pill */}
-          <div className="heroTrustBadgesRow">
-            <span className="trustPill">
-              <ShieldCheck size={13} className="trustIcon" />
-              <span>{isAr ? "معاينة حية عند الاستلام" : "Live Inspection On Delivery"}</span>
-            </span>
-            <span className="trustPill">
-              <Award size={13} className="trustIcon" />
-              <span>{isAr ? "توثيق تاريخي معتمد" : "Verified Provenance"}</span>
-            </span>
-            <span className="trustPill">
-              <Truck size={13} className="trustIcon" />
-              <span>{isAr ? "شحن مصفح مؤمن" : "White-Glove Shipping"}</span>
-            </span>
           </div>
         </div>
       </div>
