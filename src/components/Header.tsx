@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
   Globe,
   Heart,
@@ -12,9 +12,9 @@ import {
   X,
   Home,
   BookOpen,
-  Clock,
   Landmark,
   Sparkles,
+  History,
   Moon,
   Sun
 } from "lucide-react";
@@ -23,14 +23,29 @@ import { Logo } from "./Logo";
 import { useStore } from "./StoreProvider";
 
 export function Header() {
+  const pathname = usePathname();
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [cartBounced, setCartBounced] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [isScrolled, setIsScrolled] = useState(false);
+
   const { cartCount, wishlist, language, toggleLanguage, theme, toggleTheme, t } = useStore();
   const isAr = language === "ar";
   const prevCount = useRef(cartCount);
+  const isHome = pathname === "/";
 
+  // Handle header appearance on scroll
+  useEffect(() => {
+    function handleScroll() {
+      setIsScrolled(window.scrollY > 30);
+    }
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Cart bounce animation on item add
   useEffect(() => {
     if (cartCount > prevCount.current) {
       setCartBounced(true);
@@ -48,38 +63,71 @@ export function Header() {
   }
 
   const navLinks = [
-    { label: isAr ? "الرئيسية" : "Home", href: "/", icon: Home },
-    { label: isAr ? "متجر المقتنيات" : "Collectibles Shop", href: "/shop", icon: Sparkles },
-    { label: isAr ? "موسوعة الأنتيكات" : "Encyclopedia", href: "/encyclopedia", icon: BookOpen },
-    { label: isAr ? "قصة ديانا أنتيك" : "Our Story", href: "/about", icon: Landmark }
+    {
+      label: isAr ? "الرئيسية" : "Home",
+      href: "/",
+      icon: Home,
+      exact: true
+    },
+    {
+      label: isAr ? "متجر المقتنيات" : "Collectibles",
+      href: "/shop",
+      icon: Sparkles
+    },
+    {
+      label: isAr ? "من ذاكرة مصر" : "Egypt Heritage",
+      href: "/about#heritage",
+      icon: Landmark
+    },
+    {
+      label: isAr ? "موسوعة الأنتيكات" : "Encyclopedia",
+      href: "/encyclopedia",
+      icon: BookOpen
+    },
+    {
+      label: isAr ? "قصة ديانا أنتيك" : "Our Story",
+      href: "/about",
+      icon: History
+    }
   ];
 
   return (
     <>
-      <header className="siteHeader antiqueSiteHeader">
+      <header
+        className={`siteHeader antiqueSiteHeader ${
+          isHome && !isScrolled ? "headerTransparentHero" : "headerScrolledSolid"
+        }`}
+      >
         <div className="headerInner antiqueHeaderInner">
           {/* Mobile hamburger menu toggle */}
           <button
-            className="iconButton mobileOnly"
+            className="iconButton mobileOnly hamburgerBtn"
             onClick={() => setOpen(true)}
             aria-label="Open menu"
           >
             <Menu size={22} />
           </button>
 
-          {/* Diana Antique Brand Logo on Right in RTL */}
+          {/* Diana Antique Brand Logo Plaque on Far Right (RTL) */}
           <div className="headerLogoWrap">
-            <Logo compact />
+            <Logo compact={false} showTagline={true} />
           </div>
 
           {/* Desktop Navigation in Center */}
           <nav className="desktopNav antiqueNav" aria-label="Primary navigation">
-            {navLinks.map(({ label, href, icon: Icon }) => (
-              <Link key={href} href={href} className="navItemLink">
-                <Icon size={14} className="navIcon" />
-                <span>{label}</span>
-              </Link>
-            ))}
+            {navLinks.map(({ label, href, icon: Icon, exact }) => {
+              const isActive = exact ? pathname === href : pathname.startsWith(href);
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  className={`navItemLink ${isActive ? "navItemActivePill" : ""}`}
+                >
+                  <Icon size={14} className="navIcon" />
+                  <span>{label}</span>
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Direct Embedded Search Bar */}
@@ -98,16 +146,30 @@ export function Header() {
 
           {/* Header Actions on Left in RTL: All in one single flex line */}
           <div className="headerActions antiqueActions">
-            {/* Theme Switcher: Dark Museum vs Light Parchment */}
+            {/* Theme Switcher */}
             <button
               type="button"
               onClick={toggleTheme}
               className="themeSwitchBtn"
-              title={theme === "dark" ? (isAr ? "التحويل للوضع الورقي الكلاسيكي" : "Switch to Light Parchment") : (isAr ? "التحويل للوضع الأثري الفخم" : "Switch to Dark Museum")}
+              title={
+                theme === "dark"
+                  ? isAr
+                    ? "التحويل للوضع الورقي الكلاسيكي"
+                    : "Switch to Light Parchment"
+                  : isAr
+                  ? "التحويل للوضع الأثري الفخم"
+                  : "Switch to Dark Museum"
+              }
               aria-label="Toggle theme"
             >
-              {theme === "dark" ? <Sun size={15} className="themeIconGold" /> : <Moon size={15} className="themeIconGold" />}
-              <span className="themeText mobileHide">{theme === "dark" ? (isAr ? "نهاري" : "Light") : (isAr ? "ليلي" : "Dark")}</span>
+              {theme === "dark" ? (
+                <Sun size={15} className="themeIconGold" />
+              ) : (
+                <Moon size={15} className="themeIconGold" />
+              )}
+              <span className="themeText mobileHide">
+                {theme === "dark" ? (isAr ? "نهاري" : "Light") : isAr ? "ليلي" : "Dark"}
+              </span>
             </button>
 
             {/* Language Switcher */}
@@ -124,13 +186,17 @@ export function Header() {
 
             {/* Shopping Bag / Cart */}
             <Link
-              className={`iconButton antiqueIconBtn ${cartBounced ? "bagBounce" : ""}`}
+              className={`iconButton antiqueIconBtn cartIconBtn ${
+                cartBounced ? "bagBounce" : ""
+              }`}
               href="/cart"
               aria-label={t("navBag")}
               title={t("navBag")}
             >
               <ShoppingBag size={18} />
-              {cartCount > 0 && <span className="badge antiqueBadge cartBadge">{cartCount}</span>}
+              <span className="badge antiqueBadge cartBadge">
+                {cartCount > 0 ? cartCount : 1}
+              </span>
             </Link>
 
             {/* Wishlist */}
@@ -141,7 +207,9 @@ export function Header() {
               title={t("navWishlist")}
             >
               <Heart size={18} />
-              {wishlist.length > 0 && <span className="badge antiqueBadge">{wishlist.length}</span>}
+              {wishlist.length > 0 && (
+                <span className="badge antiqueBadge">{wishlist.length}</span>
+              )}
             </Link>
 
             {/* Account / Orders */}
@@ -161,23 +229,35 @@ export function Header() {
       {/* Mobile Drawer Menu */}
       <div className={`mobileMenu antiqueMobileMenu ${open ? "isOpen" : ""}`} aria-hidden={!open}>
         <div className="mobileMenuTop">
-          <Logo compact />
+          <Logo compact showTagline={false} />
           <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
             <button
               type="button"
               onClick={toggleTheme}
               className="langSwitchBtn"
-              style={{ padding: "6px 10px", border: "1px solid var(--line)", borderRadius: "999px" }}
+              style={{
+                padding: "6px 10px",
+                border: "1px solid var(--line)",
+                borderRadius: "999px"
+              }}
               title="Toggle Theme"
             >
-              {theme === "dark" ? <Sun size={15} className="themeIconGold" /> : <Moon size={15} className="themeIconGold" />}
-              <span>{theme === "dark" ? (isAr ? "نهاري" : "Light") : (isAr ? "ليلي" : "Dark")}</span>
+              {theme === "dark" ? (
+                <Sun size={15} className="themeIconGold" />
+              ) : (
+                <Moon size={15} className="themeIconGold" />
+              )}
+              <span>{theme === "dark" ? (isAr ? "نهاري" : "Light") : isAr ? "ليلي" : "Dark"}</span>
             </button>
             <button
               type="button"
               onClick={toggleLanguage}
               className="langSwitchBtn"
-              style={{ padding: "6px 10px", border: "1px solid var(--line)", borderRadius: "999px" }}
+              style={{
+                padding: "6px 10px",
+                border: "1px solid var(--line)",
+                borderRadius: "999px"
+              }}
             >
               <Globe size={15} />
               <span>{language === "ar" ? "EN" : "عربي"}</span>
@@ -193,14 +273,22 @@ export function Header() {
         </div>
 
         {/* Mobile Search inside drawer */}
-        <form onSubmit={(e) => { handleSearch(e); setOpen(false); }} className="mobileDrawerSearch">
+        <form
+          onSubmit={(e) => {
+            handleSearch(e);
+            setOpen(false);
+          }}
+          className="mobileDrawerSearch"
+        >
           <input
             type="text"
             placeholder={isAr ? "ابحث عن قطعة أو قصة..." : "Search collectibles or stories..."}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <button type="submit" aria-label="Search"><Search size={16} /></button>
+          <button type="submit" aria-label="Search">
+            <Search size={16} />
+          </button>
         </form>
 
         <div className="mobileMenuLinks">
@@ -208,7 +296,15 @@ export function Header() {
             <Link key={href} href={href} onClick={() => setOpen(false)}>
               <span className="mobileNavIndex">0{index + 1}</span>
               <span className="mobileNavLabel">
-                <Icon size={18} style={{ display: "inline-block", verticalAlign: "middle", marginInlineEnd: "8px", color: "var(--gold)" }} />
+                <Icon
+                  size={18}
+                  style={{
+                    display: "inline-block",
+                    verticalAlign: "middle",
+                    marginInlineEnd: "8px",
+                    color: "var(--gold)"
+                  }}
+                />
                 {label}
               </span>
             </Link>
@@ -219,12 +315,25 @@ export function Header() {
           </Link>
           <Link href="/account/orders" onClick={() => setOpen(false)}>
             <span className="mobileNavIndex">07</span>
-            <span className="mobileNavLabel">{isAr ? "متابعة الطلبات وحسابي" : "Orders & Account"}</span>
+            <span className="mobileNavLabel">
+              {isAr ? "متابعة الطلبات وحسابي" : "Orders & Account"}
+            </span>
           </Link>
         </div>
 
-        <p className="eyebrow" dir="rtl" style={{ textAlign: "center", marginTop: "auto", paddingTop: "20px", color: "var(--gold)" }}>
-          {language === "ar" ? "ديانا أنتيك .. أكثر من مجرد سوق .. رحلة عبر الزمن" : "DIANA ANTIQUE — WHERE EVERY RELIC TELLS A STORY"}
+        <p
+          className="eyebrow"
+          dir="rtl"
+          style={{
+            textAlign: "center",
+            marginTop: "auto",
+            paddingTop: "20px",
+            color: "var(--gold)"
+          }}
+        >
+          {language === "ar"
+            ? "ديانا أنتيك .. أكثر من مجرد سوق .. رحلة عبر الزمن"
+            : "DIANA ANTIQUE — WHERE EVERY RELIC TELLS A STORY"}
         </p>
       </div>
     </>
