@@ -2,17 +2,8 @@
 
 import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 import { useStore } from "./StoreProvider";
-import {
-  ChevronRight,
-  ChevronLeft,
-  Sparkles,
-  ArrowLeft,
-  ArrowRight,
-  ShieldCheck,
-  Award,
-  Truck
-} from "lucide-react";
 
 interface HeroSlide {
   id: string;
@@ -38,42 +29,23 @@ const HERO_SLIDES: HeroSlide[] = [
     id: "classic-diana-masterpiece",
     // The exact beloved classic Diana Antique cover: Gramophone & Clock on left, Souq Diana on right
     image: "/media/extracted/hero_diana_clean_bg.webp",
-    eyebrowAr: "ديوان الأنتيكات والمقتنيات النادرة حول العالم",
-    eyebrowEn: "Rare Historical Collectibles & Global Antiques",
+    eyebrowAr: "",
+    eyebrowEn: "",
     titleAr: "اكتشف سحر الماضي",
     titleEn: "Discover The Magic Of The Past",
     subtitleAr: "في عالم الأنتيكات والتحف",
     subtitleEn: "In The World Of Antiques & Fine Relics",
-    descAr: "قطع مختارة بعناية.. مع قصص وتاريخ يروي الماضي",
+    descAr: "قطع مختارة بعناية .. مع قصص وتاريخ يروي الماضي",
     descEn: "Meticulously curated relics, each carrying verified provenance and a timeless story.",
     ctaTextAr: "تصفح القطع",
     ctaTextEn: "Browse Collectibles",
     ctaLink: "/shop"
-  },
-  {
-    id: "souq-diana-heritage",
-    image: "/media/generated/hero_slide_souq_diana.webp",
-    eyebrowAr: "من قلب القاهرة الخديوية وشارع عماد الدين",
-    eyebrowEn: "From Downtown Cairo & Historic Emad El-Deen Street",
-    titleAr: "سوق ديانا العريق",
-    titleEn: "Historic Souq Diana",
-    subtitleAr: "أصالة الزمن الجميل وروائع التراث",
-    subtitleEn: "Authentic Belle Époque Heritage & Hidden Gems",
-    descAr: "حكايات الماضي وفخامة الصالونات الكلاسيكية.. نوادر موثقة ومعاينة حية عند الاستلام.",
-    descEn: "Live inspection upon delivery, insured white-glove shipping, and authentic period items.",
-    ctaTextAr: "استكشف مقتنيات مصر",
-    ctaTextEn: "Explore Egypt's Heritage",
-    ctaLink: "/shop?era=pre-1900",
-    secondaryLink: "/encyclopedia",
-    secondaryTextAr: "موسوعة الأنتيكات",
-    secondaryTextEn: "Encyclopedia"
   }
 ];
 
 export function Hero() {
   const { language } = useStore();
   const isAr = language === "ar";
-  const ArrowIcon = isAr ? ArrowLeft : ArrowRight;
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);

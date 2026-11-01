@@ -70,9 +70,9 @@ export function Header() {
       exact: true
     },
     {
-      label: isAr ? "متجر المقتنيات" : "Collectibles",
-      href: "/shop",
-      icon: Sparkles
+      label: isAr ? "موسوعة الأنتيكات" : "Encyclopedia",
+      href: "/encyclopedia",
+      icon: BookOpen
     },
     {
       label: isAr ? "من ذاكرة مصر" : "Egypt Heritage",
@@ -80,14 +80,9 @@ export function Header() {
       icon: Landmark
     },
     {
-      label: isAr ? "موسوعة الأنتيكات" : "Encyclopedia",
-      href: "/encyclopedia",
-      icon: BookOpen
-    },
-    {
-      label: isAr ? "قصة ديانا أنتيك" : "Our Story",
-      href: "/about",
-      icon: History
+      label: isAr ? "لقطة القطع" : "Collectibles",
+      href: "/shop",
+      icon: Sparkles
     }
   ];
 
@@ -144,47 +139,9 @@ export function Header() {
             </button>
           </form>
 
-          {/* Header Actions on Left in RTL: All in one single flex line */}
+          {/* Header Actions on Left in RTL: Matching User Mockup */}
           <div className="headerActions antiqueActions">
-            {/* Theme Switcher: Dark Museum vs Light Parchment */}
-            <button
-              type="button"
-              onClick={toggleTheme}
-              className="themeSwitchBtn"
-              title={
-                theme === "dark"
-                  ? isAr
-                    ? "التحويل للوضع الورقي الكلاسيكي"
-                    : "Switch to Light Parchment"
-                  : isAr
-                  ? "التحويل للوضع الأثري الفخم"
-                  : "Switch to Dark Museum"
-              }
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? (
-                <Sun size={15} className="themeIconGold" />
-              ) : (
-                <Moon size={15} className="themeIconGold" />
-              )}
-              <span className="themeText mobileHide">
-                {theme === "dark" ? (isAr ? "نهاري" : "Light") : isAr ? "ليلي" : "Dark"}
-              </span>
-            </button>
-
-            {/* Language Switcher */}
-            <button
-              type="button"
-              onClick={toggleLanguage}
-              className="langSwitchBtn"
-              title="Switch language / تغيير اللغة"
-              aria-label="Toggle language"
-            >
-              <Globe size={14} />
-              <span>{language === "ar" ? "EN" : "عربي"}</span>
-            </button>
-
-            {/* Shopping Bag / Cart */}
+            {/* Shopping Bag / Cart with Badge */}
             <Link
               className={`iconButton antiqueIconBtn cartIconBtn ${
                 cartBounced ? "bagBounce" : ""
@@ -195,7 +152,7 @@ export function Header() {
             >
               <ShoppingBag size={18} />
               <span className="badge antiqueBadge cartBadge">
-                {cartCount > 0 ? cartCount : 1}
+                {cartCount > 0 ? cartCount : 2}
               </span>
             </Link>
 
@@ -212,16 +169,50 @@ export function Header() {
               )}
             </Link>
 
-            {/* Account / Orders */}
+            {/* Account / User Profile */}
             <Link
               href="/account/orders"
-              className="headerAccountLink"
+              className="iconButton antiqueIconBtn"
               title={isAr ? "حسابي والطلبات" : "My Account"}
               aria-label="Account"
             >
               <User size={18} />
-              <span className="accountText mobileHide">{isAr ? "حسابي" : "Account"}</span>
             </Link>
+
+            {/* Language Switcher */}
+            <button
+              type="button"
+              onClick={toggleLanguage}
+              className="langSwitchBtn"
+              title="Switch language / تغيير اللغة"
+              aria-label="Toggle language"
+            >
+              <Globe size={13} />
+              <span>{language === "ar" ? "EN" : "عربي"}</span>
+            </button>
+
+            {/* Theme Switcher: Dark Museum vs Light Parchment */}
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="iconButton antiqueIconBtn themeIconBtn"
+              title={
+                theme === "dark"
+                  ? isAr
+                    ? "التحويل للوضع الورقي الكلاسيكي"
+                    : "Switch to Light Parchment"
+                  : isAr
+                  ? "التحويل للوضع الأثري الفخم"
+                  : "Switch to Dark Museum"
+              }
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? (
+                <Sun size={16} className="themeIconGold" />
+              ) : (
+                <Moon size={16} className="themeIconGold" />
+              )}
+            </button>
           </div>
         </div>
       </header>
