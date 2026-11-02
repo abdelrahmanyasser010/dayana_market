@@ -177,7 +177,7 @@ export function Header() {
             {/* Account / User Profile */}
             <Link
               href="/account/orders"
-              className="iconButton antiqueIconBtn"
+              className="iconButton antiqueIconBtn desktopOnlyAction"
               title={isAr ? "حسابي والطلبات" : "My Account"}
               aria-label="Account"
             >
@@ -188,7 +188,7 @@ export function Header() {
             <button
               type="button"
               onClick={toggleLanguage}
-              className="langSwitchBtn"
+              className="langSwitchBtn desktopOnlyAction"
               title="Switch language / تغيير اللغة"
               aria-label="Toggle language"
             >
@@ -200,7 +200,7 @@ export function Header() {
             <button
               type="button"
               onClick={toggleTheme}
-              className="iconButton antiqueIconBtn themeIconBtn"
+              className="iconButton antiqueIconBtn themeIconBtn desktopOnlyAction"
               title={
                 theme === "dark"
                   ? isAr

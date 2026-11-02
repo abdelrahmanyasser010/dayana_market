@@ -492,11 +492,11 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
   .productInfo h1 { font-size: 48px; }
   .sizeOptions { grid-template-columns: repeat(5,1fr); }
   .desktopBuyRow { display: none; }
-  .mobileStickyBuy { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: rgba(17,17,17,.92); backdrop-filter: blur(16px); padding: 10px max(12px, env(safe-area-inset-left)) calc(10px + env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-right)); border-top: 1px solid var(--line); }
+  .mobileStickyBuy { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: rgba(18, 12, 8, 0.96) !important; backdrop-filter: blur(16px); padding: 10px max(12px, env(safe-area-inset-left)) calc(10px + env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-right)); border-top: 1px solid rgba(223, 190, 118, 0.3) !important; }
   .mobileStickyBuy div { display: grid; gap: 3px; min-width: 0; }
-  .mobileStickyBuy span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 13px; color: var(--muted); }
-  .mobileStickyBuy strong { font-size: 15px; }
-  .mobileStickyBuy button { height: 44px; border: 0; background: var(--ink); color: var(--bg); padding: 0 22px; text-transform: uppercase; letter-spacing: .09em; font-size: 13px; font-weight: 700; }
+  .mobileStickyBuy span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 13px; color: #cfc7bc; }
+  .mobileStickyBuy strong { font-size: 15px; color: #deb068; }
+  .mobileStickyBuy button { height: 42px; border: 0; background: #deb068; color: #160f0a; border-radius: 999px; padding: 0 20px; font-family: var(--font-cairo), 'Cairo', sans-serif; font-size: 13px; font-weight: 700; box-shadow: 0 2px 10px rgba(222, 176, 104, 0.4); }
   .relatedSection { padding: 65px 12px 0; }
   .cartLayout, .checkoutLayout { grid-template-columns: 1fr; gap: 24px; }
   .cartItem { grid-template-columns: 102px 1fr; gap: 12px; }
@@ -538,10 +538,11 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
     left: 0;
     right: 0;
     bottom: 0;
-    background: #131411 !important;
-    backdrop-filter: blur(20px);
-    border-top: 1px solid rgba(255, 255, 255, 0.14) !important;
-    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.6) !important;
+    background: rgba(18, 12, 8, 0.96) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-top: 1px solid rgba(223, 190, 118, 0.3) !important;
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.7) !important;
     padding: 7px 2px calc(7px + env(safe-area-inset-bottom)) !important;
     box-sizing: border-box;
   }
@@ -551,14 +552,15 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
     align-items: center !important;
     justify-content: center !important;
     gap: 3px !important;
-    color: #9e9c94 !important;
+    color: #a89f91 !important;
+    font-family: var(--font-cairo), 'Cairo', sans-serif !important;
     font-size: 11px !important;
     font-weight: 600 !important;
     transition: color 0.18s;
     text-decoration: none !important;
   }
   .storeBottomNav a.active, .storeBottomNav a:hover {
-    color: #ffffff !important;
+    color: #deb068 !important;
     font-weight: 700 !important;
   }
   .bottomNavIconWrap {
@@ -569,8 +571,8 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
     position: absolute;
     top: -5px;
     right: -9px;
-    background: #ffffff;
-    color: #111111;
+    background: #deb068 !important;
+    color: #1a0f07 !important;
     font-size: 10px;
     font-weight: 800;
     min-width: 15px;
@@ -5465,48 +5467,96 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
   .headerSearchBar {
     display: none !important;
   }
+  .desktopOnlyAction {
+    display: none !important;
+  }
+  .antiqueSiteHeader {
+    height: 58px !important;
+  }
+  .antiqueHeaderInner {
+    padding: 0 12px !important;
+    gap: 8px !important;
+  }
+  .dianaLogoPlaque {
+    padding: 2px 6px !important;
+    gap: 6px !important;
+    border-radius: 10px !important;
+  }
+  .dianaTempleCrest svg {
+    width: 26px !important;
+    height: 26px !important;
+  }
+  .dianaArabicName {
+    font-size: 14.5px !important;
+  }
+  .dianaEnglishName {
+    font-size: 8.5px !important;
+  }
+  .dianaTagline {
+    display: none !important;
+  }
+  .antiqueActions {
+    gap: 6px !important;
+  }
+  .antiqueIconBtn {
+    width: 34px !important;
+    height: 34px !important;
+  }
   .antiqueHeroInteractive {
-    height: auto;
-    min-height: 380px;
-    align-items: center;
+    height: auto !important;
+    min-height: clamp(340px, 85vw, 420px) !important;
+    align-items: center !important;
   }
   .heroCoverImg {
-    object-position: center center;
+    object-position: center center !important;
   }
   .heroAmbientOverlay {
     background: linear-gradient(
       to top,
-      rgba(14, 9, 6, 0.92) 0%,
-      rgba(14, 9, 6, 0.75) 60%,
-      rgba(14, 9, 6, 0.3) 100%
-    );
+      rgba(14, 9, 6, 0.94) 0%,
+      rgba(14, 9, 6, 0.78) 55%,
+      rgba(14, 9, 6, 0.35) 100%
+    ) !important;
   }
   .heroContentContainer {
-    justify-content: center;
-    padding: 72px 16px 24px;
+    justify-content: center !important;
+    padding: calc(58px + 14px) 14px 20px !important;
   }
   .heroTextCard {
-    align-items: center;
-    text-align: center;
+    align-items: center !important;
+    text-align: center !important;
+    max-width: 330px !important;
+    margin: 0 auto !important;
+  }
+  .heroMainTitle {
+    font-size: clamp(21px, 6vw, 27px) !important;
+    line-height: 1.25 !important;
+  }
+  .heroSubTitle {
+    font-size: clamp(14px, 4.2vw, 18px) !important;
+    line-height: 1.3 !important;
   }
   .heroFlourishDivider {
-    margin: 14px auto;
+    max-width: 170px !important;
+    margin: 8px auto !important;
+  }
+  .heroDescription {
+    font-size: 12.5px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 12px !important;
+  }
+  .heroPrimaryBtn {
+    font-size: 13.5px !important;
+    padding: 8px 24px !important;
   }
   .heroActionsGroup {
-    justify-content: center;
+    justify-content: center !important;
   }
   .heroTrustBadgesRow {
-    justify-content: center;
+    justify-content: center !important;
   }
   .carouselNavBtn {
-    display: none;
-  }
-  .dianaTagline {
-    display: none;
-  }
-  .dianaLogoPlaque {
-    padding: 4px 10px;
-    gap: 8px;
+    display: none !important;
   }
 }
 
@@ -7364,69 +7414,283 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
 
 @media (max-width: 768px) {
   .headerSearchBar,
-  .desktopNav {
-    display: none;
+  .desktopNav,
+  .desktopOnlyAction {
+    display: none !important;
   }
+
+  /* Mobile Header Bar */
+  .antiqueSiteHeader {
+    height: 58px !important;
+  }
+  .antiqueHeaderInner {
+    padding: 0 12px !important;
+    gap: 8px !important;
+  }
+
+  /* Section Header Sizing */
+  .antiqueSectionHeader {
+    gap: 10px !important;
+    margin-bottom: 16px !important;
+    padding: 0 10px !important;
+  }
+  .antiqueSectionTitle {
+    font-size: clamp(15px, 4.2vw, 19px) !important;
+    white-space: normal !important;
+    text-align: center !important;
+    line-height: 1.35 !important;
+  }
+
+  /* 1. Category Track: Seamless Horizontal Swipe */
   .unifiedCategoryRow {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding: 4px 0 10px;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    padding: 4px 12px 10px !important;
+    margin: 0 -12px !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+  .unifiedCategoryRow::-webkit-scrollbar {
+    display: none !important;
   }
   .categoryCardsTrackUnified {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 10px;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 4px;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 10px !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding-bottom: 4px !important;
+    scroll-snap-type: x mandatory !important;
+    scrollbar-width: none !important;
+  }
+  .categoryCardsTrackUnified::-webkit-scrollbar {
+    display: none !important;
   }
   .antiqueCategoryCardUnified {
-    min-width: 105px;
-    flex-shrink: 0;
+    flex: 0 0 105px !important;
+    min-width: 105px !important;
+    max-width: 105px !important;
+    scroll-snap-align: start !important;
   }
-  .unifiedTimelineRow,
+  .antiqueCategoryCardUnified .catImageWrapUnified {
+    height: 110px !important;
+  }
+  .antiqueCategoryCardUnified .catLabelUnified {
+    font-size: 11.5px !important;
+  }
+
+  /* 2. Timeline Track: Side Card + Horizontal Swipe Epochs */
+  .unifiedTimelineRow {
+    flex-direction: column !important;
+    gap: 14px !important;
+  }
+  .storySideCardExact {
+    width: 100% !important;
+    max-width: 340px !important;
+    margin: 0 auto !important;
+    border-radius: 12px !important;
+  }
+  .timelineTrackContainerUnified {
+    width: 100% !important;
+  }
+  .timelineCardsTrackUnified {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 10px !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 4px 12px 12px !important;
+    margin: 0 -12px !important;
+    scrollbar-width: none !important;
+  }
+  .timelineCardsTrackUnified::-webkit-scrollbar {
+    display: none !important;
+  }
+  .antiqueEpochCardUnified {
+    flex: 0 0 115px !important;
+    min-width: 115px !important;
+    scroll-snap-align: start !important;
+  }
+  .antiqueEpochCardUnified .epochImageWrapUnified {
+    height: 115px !important;
+  }
+  .epochTitleUnified {
+    font-size: 11.5px !important;
+  }
+  .epochYearsUnified {
+    font-size: 9.5px !important;
+  }
+
+  /* 3. Featured Collectibles: Side Card + Horizontal Swipe Products (يسكروّل يمين وشمال) */
   .unifiedFeaturedRow {
-    flex-direction: column;
+    flex-direction: column !important;
+    gap: 14px !important;
   }
-  .storySideCardExact,
   .pieceWeekCardExact {
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
+    width: 100% !important;
+    max-width: 340px !important;
+    margin: 0 auto !important;
+    border-radius: 12px !important;
   }
   .featuredProductsGridUnified {
-    grid-template-columns: 1fr;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 12px !important;
+    padding: 6px 14px 16px !important;
+    margin: 0 -14px !important;
+    scrollbar-width: none !important;
   }
-  .shopProductsGrid {
-    grid-template-columns: 1fr;
+  .featuredProductsGridUnified::-webkit-scrollbar {
+    display: none !important;
   }
+  .featuredProductsGridUnified .antiqueParchmentCardUnified {
+    flex: 0 0 clamp(190px, 62vw, 240px) !important;
+    width: clamp(190px, 62vw, 240px) !important;
+    min-width: clamp(190px, 62vw, 240px) !important;
+    max-width: clamp(190px, 62vw, 240px) !important;
+    scroll-snap-align: start !important;
+  }
+  .antiqueParchmentCardUnified .antiqueCardMediaLinkUnified {
+    height: 140px !important;
+  }
+  .antiqueProductTitleUnified {
+    font-size: 13px !important;
+    line-height: 1.3 !important;
+    height: 34px !important;
+    overflow: hidden !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+  }
+  .antiquePriceValueUnified {
+    font-size: 13.5px !important;
+  }
+  .antiqueCtaBtn {
+    padding: 7px 10px !important;
+    font-size: 12px !important;
+  }
+  .cardTrustNote {
+    font-size: 10.5px !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* 4. Shop Catalog & Heritage: 2-Column Responsive Grid (No giant stacked cards) */
+  .shopMainContainer {
+    grid-template-columns: 1fr !important;
+    padding: 14px 12px 28px !important;
+    gap: 16px !important;
+  }
+  .shopFiltersSidebar {
+    position: static !important;
+    margin-bottom: 12px !important;
+    padding: 12px !important;
+  }
+  .shopProductsGrid,
+  .heritageProductsGridUnified,
+  .eraProductsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    padding: 0 !important;
+  }
+  .antiqueShopCard {
+    border-radius: 10px !important;
+  }
+  .shopCardMedia {
+    height: 135px !important;
+  }
+  .shopCardBody {
+    padding: 8px 10px 10px !important;
+  }
+  .antiqueShopCard .shopCardTitle {
+    font-size: 12px !important;
+    line-height: 1.3 !important;
+    height: 32px !important;
+    overflow: hidden !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+  }
+  .antiqueShopCard .shopCardPrice {
+    font-size: 12.5px !important;
+  }
+  .shopCardProvenance,
+  .shopCardTrustNote {
+    display: none !important;
+  }
+  .antiqueShopCard .shopCardCtaBtn {
+    padding: 6px 8px !important;
+    font-size: 11px !important;
+    gap: 4px !important;
+  }
+  .shopCardBadges .antiqueWishBtn {
+    width: 28px !important;
+    height: 28px !important;
+  }
+  .shopCardBadges .verifiedTag {
+    font-size: 9.5px !important;
+    padding: 2px 6px !important;
+  }
+
+  /* Other Grids */
   .heritageThemesGrid {
-    grid-template-columns: 1fr;
-  }
-  .heritageProductsGridUnified {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
   .articlesGridCompact {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
   .erasTabsTrack {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .eraProductsGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr) !important;
   }
   .discoveryCardsGridUnified {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
+
+  /* 5. Trust Bar on Mobile: Clean 2-Column Layout */
   .trustBarInner {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    padding: 16px 12px !important;
   }
+  .trustItem {
+    padding: 10px 8px !important;
+    gap: 8px !important;
+  }
+  .trustIconCircle {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+  }
+  .trustIconCircle svg {
+    width: 17px !important;
+    height: 17px !important;
+  }
+  .trustText h4 {
+    font-size: 12px !important;
+  }
+  .trustText p {
+    font-size: 10px !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Newsletter & Footer Pillars */
   .newsletterInner {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 20px 14px !important;
   }
   .newsletterForm {
-    max-width: 100%;
+    max-width: 100% !important;
+  }
+  .antiquePillarsStrip {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    padding: 20px 14px !important;
   }
 }
 
