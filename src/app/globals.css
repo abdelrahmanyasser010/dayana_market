@@ -5622,49 +5622,72 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
 
 .antiqueCategoryCardUnified {
   width: 100%;
-  height: 126px;
-  background: var(--antique-surface);
-  border: 1px solid var(--antique-border);
-  border-radius: 12px;
+  height: 128px;
+  background: linear-gradient(180deg, rgba(32, 22, 15, 0.9) 0%, rgba(20, 14, 9, 0.97) 100%);
+  border: 1px solid rgba(223, 190, 118, 0.26);
+  border-radius: 14px;
   padding: 10px 4px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  box-shadow: var(--antique-card-shadow);
-  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 235, 176, 0.08);
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.22s, box-shadow 0.22s;
+  text-decoration: none;
 }
 
 .antiqueCategoryCardUnified:hover {
   transform: translateY(-4px);
-  border-color: var(--antique-gold);
-  box-shadow: 0 6px 16px rgba(184, 134, 11, 0.2);
+  border-color: rgba(223, 190, 118, 0.7);
+  box-shadow: 0 8px 22px rgba(223, 190, 118, 0.22), inset 0 1px 0 rgba(255, 235, 176, 0.2);
 }
 
 .catCardImageWrapUnified {
-  width: 66px;
-  height: 66px;
-  border-radius: 10px;
-  background: var(--antique-inner-bg);
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  background: radial-gradient(circle at 50% 50%, rgba(223, 190, 118, 0.3) 0%, rgba(42, 28, 18, 0.88) 68%, rgba(18, 12, 8, 0.98) 100%);
+  border: 1px solid rgba(223, 190, 118, 0.35);
   overflow: hidden;
-  margin-bottom: 6px;
+  margin-bottom: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  box-shadow: inset 0 0 14px rgba(223, 190, 118, 0.16), 0 3px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.25s ease;
+}
+
+.antiqueCategoryCardUnified:hover .catCardImageWrapUnified {
+  border-color: rgba(223, 190, 118, 0.75);
+  box-shadow: inset 0 0 18px rgba(223, 190, 118, 0.3), 0 4px 14px rgba(223, 190, 118, 0.25);
+  transform: scale(1.04);
 }
 
 .catCardImageWrapUnified img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: contrast(1.15) brightness(1.12);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.antiqueCategoryCardUnified:hover .catCardImageWrapUnified img {
+  transform: scale(1.08);
+  filter: contrast(1.2) brightness(1.18);
 }
 
 .catCardLabelUnified {
   font-size: 12px;
-  font-weight: 600;
-  color: var(--antique-ink);
+  font-weight: 700;
+  color: #f2ebe1;
   line-height: 1.25;
+  transition: color 0.2s;
+}
+
+.antiqueCategoryCardUnified:hover .catCardLabelUnified {
+  color: var(--antique-gold);
 }
 
 /* 5. Home Timeline Track Row - Never Cropped */
@@ -7428,7 +7451,13 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
     gap: 8px !important;
   }
 
-  /* Section Header Sizing */
+  /* Section Padding & Header Sizing on Mobile */
+  .antiqueCategorySection,
+  .antiqueTimelineSection,
+  .antiqueFeaturedSection,
+  .antiqueTrustBar {
+    padding: 24px 12px 28px !important;
+  }
   .antiqueSectionHeader {
     gap: 10px !important;
     margin-bottom: 16px !important;
@@ -7467,16 +7496,23 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
     display: none !important;
   }
   .antiqueCategoryCardUnified {
-    flex: 0 0 105px !important;
-    min-width: 105px !important;
-    max-width: 105px !important;
+    flex: 0 0 100px !important;
+    min-width: 100px !important;
+    max-width: 100px !important;
+    height: 122px !important;
+    padding: 10px 4px 8px !important;
     scroll-snap-align: start !important;
   }
-  .antiqueCategoryCardUnified .catImageWrapUnified {
-    height: 110px !important;
+  .antiqueCategoryCardUnified .catCardImageWrapUnified {
+    width: 64px !important;
+    height: 64px !important;
+    margin-bottom: 6px !important;
+    border-radius: 10px !important;
   }
-  .antiqueCategoryCardUnified .catLabelUnified {
+  .antiqueCategoryCardUnified .catCardLabelUnified {
     font-size: 11.5px !important;
+    color: #f2ebe1 !important;
+    font-weight: 700 !important;
   }
 
   /* 2. Timeline Track: Side Card + Horizontal Swipe Epochs */
@@ -7509,12 +7545,15 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
     display: none !important;
   }
   .antiqueEpochCardUnified {
-    flex: 0 0 115px !important;
-    min-width: 115px !important;
+    flex: 0 0 105px !important;
+    min-width: 105px !important;
     scroll-snap-align: start !important;
   }
   .antiqueEpochCardUnified .epochImageWrapUnified {
-    height: 115px !important;
+    width: 90px !important;
+    height: 64px !important;
+    border-radius: 10px !important;
+    margin-bottom: 6px !important;
   }
   .epochTitleUnified {
     font-size: 11.5px !important;
