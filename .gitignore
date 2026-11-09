@@ -5,6 +5,7 @@ node_modules
 .DS_Store
 *.log
 tsconfig.tsbuildinfo
+*.zip
 
 # Runtime product uploads
 /public/uploads/*
