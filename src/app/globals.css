@@ -2234,17 +2234,7 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
     flex-shrink: 0 !important;
     white-space: nowrap !important;
   }
-  .headerActions .langSwitchBtn {
-    width: 38px !important;
-    height: 38px !important;
-    padding: 0 !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    border-radius: 50% !important;
-    flex-shrink: 0 !important;
-  }
-  .headerActions .langSwitchBtn span {
+  .headerActions .desktopOnlyAction {
     display: none !important;
   }
   .headerActions .iconButton {
@@ -7596,27 +7586,37 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-i
     scroll-snap-align: start !important;
   }
   .antiqueParchmentCardUnified .antiqueCardMediaLinkUnified {
-    height: 140px !important;
+    height: 130px !important;
+    aspect-ratio: unset !important;
+    padding: 8px !important;
+  }
+  .antiqueParchmentCardUnified .antiqueCardBodyUnified {
+    padding: 8px 10px 10px !important;
+    gap: 5px !important;
   }
   .antiqueProductTitleUnified {
     font-size: 13px !important;
     line-height: 1.3 !important;
     height: 34px !important;
+    margin-bottom: 2px !important;
     overflow: hidden !important;
     display: -webkit-box !important;
     -webkit-line-clamp: 2 !important;
     -webkit-box-orient: vertical !important;
   }
   .antiquePriceValueUnified {
-    font-size: 13.5px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
   }
   .antiqueCtaBtn {
     padding: 7px 10px !important;
     font-size: 12px !important;
+    border-radius: 999px !important;
   }
   .cardTrustNote {
-    font-size: 10.5px !important;
-    margin-bottom: 8px !important;
+    font-size: 10px !important;
+    margin-bottom: 6px !important;
+    color: #c5baaa !important;
   }
 
   /* 4. Shop Catalog & Heritage: 2-Column Responsive Grid (No giant stacked cards) */
